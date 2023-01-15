@@ -104,4 +104,16 @@
                 app:srcCompat="@drawable/mapaRealistaEsglesia_4x3_012" />
         </TableRow>
     </TableLayout>
+
+    <TableLayout
+        android:layout_width="798dp"
+        android:layout_height="548dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="731dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
