@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".PantallaBotonsImatge">
 
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="447dp"
+        tools:layout_editor_absoluteY="195dp" />
+
     <TableLayout
         android:layout_width="409dp"
         android:layout_height="729dp"
@@ -56,6 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/mapaRealistaEsglesia_4x3_006" />
+
         </TableRow>
 
         <TableRow
@@ -106,14 +115,63 @@
     </TableLayout>
 
     <TableLayout
-        android:layout_width="798dp"
-        android:layout_height="548dp"
+        android:layout_width="812dp"
+        android:layout_height="202dp"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="731dp">
+        tools:layout_editor_absoluteY="1077dp">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/imageButton13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleX="4"
+                android:scaleY="4"
+                app:srcCompat="@android:drawable/ic_media_rew" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pregunta" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <ImageButton
+                android:id="@+id/imageButton14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleX="4"
+                android:scaleY="4"
+                app:srcCompat="@android:drawable/ic_media_ff" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imageButton15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleX="4"
+                android:scaleY="4"
+                app:srcCompat="@android:drawable/checkbox_on_background" />
+        </TableRow>
 
     </TableLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
