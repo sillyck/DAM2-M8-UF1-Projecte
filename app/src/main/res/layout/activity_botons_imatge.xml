@@ -8,7 +8,7 @@
     tools:context=".PantallaBotonsImatge">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:foregroundTint="#FF0000"
@@ -21,11 +21,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="409dp"
         android:layout_height="729dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutPregunta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5">
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle">
 
         <TableRow
             android:layout_width="match_parent"
@@ -122,22 +124,23 @@
     </TableLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linearLayoutPregunta"
         android:layout_width="783dp"
         android:layout_height="107dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageButton
-            android:id="@+id/imageButton13"
+            android:id="@+id/imageButtonPregunta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleX="4"
             android:scaleY="4"
-            app:srcCompat="@android:drawable/ic_media_rew" />
+            app:srcCompat="@android:drawable/ic_media_rew"
+            android:onClick="imageButtonPreguntaOnClick"/>
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewPregunta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pregunta"
@@ -145,51 +148,55 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayoutResposta"
         android:layout_width="803dp"
         android:layout_height="113dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <View
+            android:id="@+id/viewResposta"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textViewRespota"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pregunta"
+            android:text="Resposta"
             tools:ignore="HardcodedText" />
 
         <ImageButton
-            android:id="@+id/imageButton14"
+            android:id="@+id/imageButtonResposta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleX="4"
             android:scaleY="4"
-            app:srcCompat="@android:drawable/ic_media_ff" />
+            app:srcCompat="@android:drawable/ic_media_ff"
+            android:onClick="imageButtonRespostaOnClick"/>
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayoutContinuar"
         android:layout_width="810dp"
         android:layout_height="117dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <View
+            android:id="@+id/viewContinuar"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <ImageButton
-            android:id="@+id/imageButton15"
+            android:id="@+id/imageButtonContinuar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleX="4"
             android:scaleY="4"
-            app:srcCompat="@android:drawable/checkbox_on_background" />
+            app:srcCompat="@android:drawable/checkbox_on_background"
+            android:onClick="imageButtonContinuarOnClick"/>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
