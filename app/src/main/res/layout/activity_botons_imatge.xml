@@ -121,69 +121,75 @@
         </TableRow>
     </TableLayout>
 
-    <TableLayout
-        android:layout_width="812dp"
-        android:layout_height="202dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="1dp">
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="783dp"
+        android:layout_height="107dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-        <TableRow
+        <ImageButton
+            android:id="@+id/imageButton13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp">
+            android:scaleX="4"
+            android:scaleY="4"
+            app:srcCompat="@android:drawable/ic_media_rew" />
 
-            <ImageButton
-                android:id="@+id/imageButton13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleX="4"
-                android:scaleY="4"
-                app:srcCompat="@android:drawable/ic_media_rew" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pregunta"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pregunta" />
+    <LinearLayout
+        android:layout_width="803dp"
+        android:layout_height="113dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-        </TableRow>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="end"
-            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pregunta"
+            tools:ignore="HardcodedText" />
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+        <ImageButton
+            android:id="@+id/imageButton14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="4"
+            android:scaleY="4"
+            app:srcCompat="@android:drawable/ic_media_ff" />
+    </LinearLayout>
 
-            <ImageButton
-                android:id="@+id/imageButton14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleX="4"
-                android:scaleY="4"
-                app:srcCompat="@android:drawable/ic_media_ff" />
-        </TableRow>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="810dp"
+        android:layout_height="117dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="end">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
 
-            <ImageButton
-                android:id="@+id/imageButton15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleX="4"
-                android:scaleY="4"
-                app:srcCompat="@android:drawable/checkbox_on_background" />
-        </TableRow>
-
-    </TableLayout>
+        <ImageButton
+            android:id="@+id/imageButton15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="4"
+            android:scaleY="4"
+            app:srcCompat="@android:drawable/checkbox_on_background" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
