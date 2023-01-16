@@ -6,9 +6,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.view.Display;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -39,14 +37,8 @@ public class PantallaBotonsImatge extends AppCompatActivity
         setContentView(R.layout.activity_botons_imatge);
 
         identificarComponents();
-//        imageButtonPregunta.setOnClickListener(v -> setState(0));
-//        imageButtonResposta.setOnClickListener(v -> setState(1));
 
         setState(0);
-
-//        Display display = ((WindowManager)getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
-//        int width = display.getWidth();
-//        int height = display.getHeight();
     }
 
     public void setState(int state)
@@ -93,18 +85,6 @@ public class PantallaBotonsImatge extends AppCompatActivity
         }
     }
 
-    @Deprecated
-    @SuppressWarnings("unused")
-    public static void setComponentState(Context context, String packageName, String componentClassName, boolean enabled)
-    {
-        PackageManager pm = context.getApplicationContext().getPackageManager();
-        ComponentName componentName = new ComponentName(packageName, componentClassName);
-        int state = enabled
-                ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED
-                : PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
-        pm.setComponentEnabledSetting(componentName, state, PackageManager.DONT_KILL_APP);
-    }
-
     private void identificarComponents()
     {
         linearLayoutPregunta = findViewById(R.id.linearLayoutPregunta);
@@ -130,12 +110,6 @@ public class PantallaBotonsImatge extends AppCompatActivity
         imageButton010 = findViewById(R.id.imageButton010);
         imageButton011 = findViewById(R.id.imageButton011);
         imageButton012 = findViewById(R.id.imageButton012);
-    }
-
-    @Deprecated
-    public void imageButtonBottomOnClick(View v)
-    {
-        setState(1);
     }
 
     public void imageButtonPreguntaOnClick(View v)
