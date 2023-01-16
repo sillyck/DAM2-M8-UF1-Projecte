@@ -10,6 +10,7 @@ import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
@@ -18,6 +19,9 @@ public class PantallaBotonsImatge extends AppCompatActivity
 {
     public int state = 0;
     public int question = -1;
+    public int correctAnswer = -1;
+    public int selectedAnswer = -1;
+    public int didItGetItRight = -1; //-1: Not answered yet; 0: Wrong answer; 1: Correct answer
 
     private LinearLayout linearLayoutPregunta, linearLayoutResposta, linearLayoutContinuar;
     private ImageButton imageButton001, imageButton002, imageButton003, imageButton004,
@@ -25,6 +29,7 @@ public class PantallaBotonsImatge extends AppCompatActivity
                         imageButton009, imageButton010, imageButton011, imageButton012;
     private ImageButton imageButtonPregunta, imageButtonResposta, imageButtonContinuar;
     private TextView textViewPregunta, textViewResposta, textViewTitle;
+    private ImageView imageView;
     private TableLayout tableLayout;
 
     @Override
@@ -39,9 +44,9 @@ public class PantallaBotonsImatge extends AppCompatActivity
 
         setState(0);
 
-        Display display = ((WindowManager)getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
-        int width = display.getWidth();
-        int height = display.getHeight();
+//        Display display = ((WindowManager)getSystemService(WINDOW_SERVICE)).getDefaultDisplay();
+//        int width = display.getWidth();
+//        int height = display.getHeight();
     }
 
     public void setState(int state)
@@ -58,6 +63,7 @@ public class PantallaBotonsImatge extends AppCompatActivity
         linearLayoutContinuar.setVisibility(View.GONE);
         tableLayout.setVisibility(View.GONE);
         textViewTitle.setVisibility(View.GONE);
+        imageView.setVisibility(View.GONE);
         switch(state)
         {
             case 0:
@@ -66,6 +72,7 @@ public class PantallaBotonsImatge extends AppCompatActivity
                 linearLayoutContinuar.setVisibility(View.GONE);
                 tableLayout.setVisibility(View.GONE);
                 textViewTitle.setVisibility(View.VISIBLE);
+                imageView.setVisibility(View.VISIBLE);
                 break;
             case 1:
                 linearLayoutPregunta.setVisibility(View.VISIBLE);
@@ -73,6 +80,7 @@ public class PantallaBotonsImatge extends AppCompatActivity
                 linearLayoutContinuar.setVisibility(View.GONE);
                 tableLayout.setVisibility(View.VISIBLE);
                 textViewTitle.setVisibility(View.GONE);
+                imageView.setVisibility(View.GONE);
                 break;
             case 2:
                 linearLayoutPregunta.setVisibility(View.GONE);
@@ -80,10 +88,12 @@ public class PantallaBotonsImatge extends AppCompatActivity
                 linearLayoutContinuar.setVisibility(View.VISIBLE);
                 tableLayout.setVisibility(View.VISIBLE);
                 textViewTitle.setVisibility(View.GONE);
+                imageView.setVisibility(View.GONE);
             break;
         }
     }
 
+    @Deprecated
     @SuppressWarnings("unused")
     public static void setComponentState(Context context, String packageName, String componentClassName, boolean enabled)
     {
@@ -100,7 +110,6 @@ public class PantallaBotonsImatge extends AppCompatActivity
         linearLayoutPregunta = findViewById(R.id.linearLayoutPregunta);
         linearLayoutResposta = findViewById(R.id.linearLayoutResposta);
         linearLayoutContinuar = findViewById(R.id.linearLayoutContinuar);
-
         imageButtonPregunta = findViewById(R.id.imageButtonPregunta);
         imageButtonResposta = findViewById(R.id.imageButtonResposta);
         imageButtonContinuar = findViewById(R.id.imageButtonContinuar);
@@ -108,7 +117,7 @@ public class PantallaBotonsImatge extends AppCompatActivity
         textViewResposta = findViewById(R.id.textViewRespota);
         textViewTitle = findViewById(R.id.textViewTitle);
         tableLayout = findViewById(R.id.tableLayout);
-
+        imageView = findViewById(R.id.imageViewMain);
         imageButton001 = findViewById(R.id.imageButton001);
         imageButton002 = findViewById(R.id.imageButton002);
         imageButton003 = findViewById(R.id.imageButton003);
