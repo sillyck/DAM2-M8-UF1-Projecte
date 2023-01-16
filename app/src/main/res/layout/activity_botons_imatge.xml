@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#7AC5DD"
     tools:context=".PantallaBotonsImatge">
 
     <TextView
@@ -12,6 +13,9 @@
         android:layout_height="wrap_content"
         android:foregroundTint="#FF0000"
         android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="32dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,19 +32,19 @@
             android:layout_height="match_parent">
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/imageButton001"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/mapa_realista_esglesia_4x3_001" />
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/imageButton002"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/mapa_realista_esglesia_4x3_002" />
 
             <ImageButton
-                android:id="@+id/imageButton3"
+                android:id="@+id/imageButton003"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/mapa_realista_esglesia_4x3_003" />
@@ -51,19 +55,19 @@
             android:layout_height="match_parent">
 
             <ImageButton
-                android:id="@+id/imageButton4"
+                android:id="@+id/imageButton004"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/mapa_realista_esglesia_4x3_004" />
 
             <ImageButton
-                android:id="@+id/imageButton5"
+                android:id="@+id/imageButton005"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/mapa_realista_esglesia_4x3_005" />
 
             <ImageButton
-                android:id="@+id/imageButton6"
+                android:id="@+id/imageButton006"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/mapa_realista_esglesia_4x3_006" />
@@ -75,19 +79,19 @@
             android:layout_height="match_parent">
 
             <ImageButton
-                android:id="@+id/imageButton7"
+                android:id="@+id/imageButton007"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/mapa_realista_esglesia_4x3_007" />
 
             <ImageButton
-                android:id="@+id/imageButton8"
+                android:id="@+id/imageButton008"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/mapa_realista_esglesia_4x3_008" />
 
             <ImageButton
-                android:id="@+id/imageButton9"
+                android:id="@+id/imageButton009"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/mapa_realista_esglesia_4x3_009" />
@@ -98,19 +102,19 @@
             android:layout_height="match_parent">
 
             <ImageButton
-                android:id="@+id/imageButton10"
+                android:id="@+id/imageButton010"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/mapa_realista_esglesia_4x3_010" />
 
             <ImageButton
-                android:id="@+id/imageButton11"
+                android:id="@+id/imageButton011"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/mapa_realista_esglesia_4x3_011" />
 
             <ImageButton
-                android:id="@+id/imageButton12"
+                android:id="@+id/imageButton012"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/mapa_realista_esglesia_4x3_012" />
@@ -120,12 +124,14 @@
     <TableLayout
         android:layout_width="812dp"
         android:layout_height="202dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1077dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="1dp">
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
 
             <ImageButton
                 android:id="@+id/imageButton13"
@@ -145,7 +151,9 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="end"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView3"
@@ -164,7 +172,8 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="end">
 
             <ImageButton
                 android:id="@+id/imageButton15"
