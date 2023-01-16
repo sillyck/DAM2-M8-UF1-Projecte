@@ -15,115 +15,115 @@ import android.widget.TextView;
 
 public class PantallaBotonsImatge extends AppCompatActivity
 {
-    public int state = 0;
-    public int question = -1;
-    public int correctAnswer = -1;
-    public int selectedAnswer = -1;
-    public int didItGetItRight = -1; //-1: Not answered yet; 0: Wrong answer; 1: Correct answer
+	public int state = 0;
+	public int question = -1;
+	public int correctAnswer = -1;
+	public int selectedAnswer = -1;
+	public int didItGetItRight = -1; //-1: Not answered yet; 0: Wrong answer; 1: Correct answer
 
-    private LinearLayout linearLayoutPregunta, linearLayoutResposta, linearLayoutContinuar;
-    private ImageButton imageButton001, imageButton002, imageButton003, imageButton004,
-                        imageButton005, imageButton006, imageButton007, imageButton008,
-                        imageButton009, imageButton010, imageButton011, imageButton012;
-    private ImageButton imageButtonPregunta, imageButtonResposta, imageButtonContinuar;
-    private TextView textViewPregunta, textViewResposta, textViewTitle;
-    private ImageView imageView;
-    private TableLayout tableLayout;
+	private LinearLayout linearLayoutPregunta, linearLayoutResposta, linearLayoutContinuar;
+	private ImageButton imageButton001, imageButton002, imageButton003, imageButton004,
+						imageButton005, imageButton006, imageButton007, imageButton008,
+						imageButton009, imageButton010, imageButton011, imageButton012;
+	private ImageButton imageButtonPregunta, imageButtonResposta, imageButtonContinuar;
+	private TextView textViewPregunta, textViewResposta, textViewTitle;
+	private ImageView imageView;
+	private TableLayout tableLayout;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_botons_imatge);
+	@Override
+	protected void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_botons_imatge);
 
-        identificarComponents();
+		identificarComponents();
 
-        setState(0);
-    }
+		setState(0);
+	}
 
-    public void setState(int state)
-    {
-        System.out.println(state);
-        this.state = state;
-        changeComponentStates(state);
-    }
+	public void setState(int state)
+	{
+		System.out.println(state);
+		this.state = state;
+		changeComponentStates(state);
+	}
 
-    public void changeComponentStates(int state)
-    {
-        linearLayoutPregunta.setVisibility(View.GONE);
-        linearLayoutResposta.setVisibility(View.GONE);
-        linearLayoutContinuar.setVisibility(View.GONE);
-        tableLayout.setVisibility(View.GONE);
-        textViewTitle.setVisibility(View.GONE);
-        imageView.setVisibility(View.GONE);
-        switch(state)
-        {
-            case 0:
-                linearLayoutPregunta.setVisibility(View.GONE);
-                linearLayoutResposta.setVisibility(View.VISIBLE);
-                linearLayoutContinuar.setVisibility(View.GONE);
-                tableLayout.setVisibility(View.GONE);
-                textViewTitle.setVisibility(View.VISIBLE);
-                imageView.setVisibility(View.VISIBLE);
-                break;
-            case 1:
-                linearLayoutPregunta.setVisibility(View.VISIBLE);
-                linearLayoutResposta.setVisibility(View.GONE);
-                linearLayoutContinuar.setVisibility(View.GONE);
-                tableLayout.setVisibility(View.VISIBLE);
-                textViewTitle.setVisibility(View.GONE);
-                imageView.setVisibility(View.GONE);
-                break;
-            case 2:
-                linearLayoutPregunta.setVisibility(View.GONE);
-                linearLayoutResposta.setVisibility(View.GONE);
-                linearLayoutContinuar.setVisibility(View.VISIBLE);
-                tableLayout.setVisibility(View.VISIBLE);
-                textViewTitle.setVisibility(View.GONE);
-                imageView.setVisibility(View.GONE);
-            break;
-        }
-    }
+	public void changeComponentStates(int state)
+	{
+		linearLayoutPregunta.setVisibility(View.GONE);
+		linearLayoutResposta.setVisibility(View.GONE);
+		linearLayoutContinuar.setVisibility(View.GONE);
+		tableLayout.setVisibility(View.GONE);
+		textViewTitle.setVisibility(View.GONE);
+		imageView.setVisibility(View.GONE);
+		switch(state)
+		{
+			case 0:
+				linearLayoutPregunta.setVisibility(View.GONE);
+				linearLayoutResposta.setVisibility(View.VISIBLE);
+				linearLayoutContinuar.setVisibility(View.GONE);
+				tableLayout.setVisibility(View.GONE);
+				textViewTitle.setVisibility(View.VISIBLE);
+				imageView.setVisibility(View.VISIBLE);
+				break;
+			case 1:
+				linearLayoutPregunta.setVisibility(View.VISIBLE);
+				linearLayoutResposta.setVisibility(View.GONE);
+				linearLayoutContinuar.setVisibility(View.GONE);
+				tableLayout.setVisibility(View.VISIBLE);
+				textViewTitle.setVisibility(View.GONE);
+				imageView.setVisibility(View.GONE);
+				break;
+			case 2:
+				linearLayoutPregunta.setVisibility(View.GONE);
+				linearLayoutResposta.setVisibility(View.GONE);
+				linearLayoutContinuar.setVisibility(View.VISIBLE);
+				tableLayout.setVisibility(View.VISIBLE);
+				textViewTitle.setVisibility(View.GONE);
+				imageView.setVisibility(View.GONE);
+			break;
+		}
+	}
 
-    private void identificarComponents()
-    {
-        linearLayoutPregunta = findViewById(R.id.linearLayoutPregunta);
-        linearLayoutResposta = findViewById(R.id.linearLayoutResposta);
-        linearLayoutContinuar = findViewById(R.id.linearLayoutContinuar);
-        imageButtonPregunta = findViewById(R.id.imageButtonPregunta);
-        imageButtonResposta = findViewById(R.id.imageButtonResposta);
-        imageButtonContinuar = findViewById(R.id.imageButtonContinuar);
-        textViewPregunta = findViewById(R.id.textViewPregunta);
-        textViewResposta = findViewById(R.id.textViewRespota);
-        textViewTitle = findViewById(R.id.textViewTitle);
-        tableLayout = findViewById(R.id.tableLayout);
-        imageView = findViewById(R.id.imageViewMain);
-        imageButton001 = findViewById(R.id.imageButton001);
-        imageButton002 = findViewById(R.id.imageButton002);
-        imageButton003 = findViewById(R.id.imageButton003);
-        imageButton004 = findViewById(R.id.imageButton004);
-        imageButton005 = findViewById(R.id.imageButton005);
-        imageButton006 = findViewById(R.id.imageButton006);
-        imageButton007 = findViewById(R.id.imageButton007);
-        imageButton008 = findViewById(R.id.imageButton008);
-        imageButton009 = findViewById(R.id.imageButton009);
-        imageButton010 = findViewById(R.id.imageButton010);
-        imageButton011 = findViewById(R.id.imageButton011);
-        imageButton012 = findViewById(R.id.imageButton012);
-    }
+	private void identificarComponents()
+	{
+		linearLayoutPregunta = findViewById(R.id.linearLayoutPregunta);
+		linearLayoutResposta = findViewById(R.id.linearLayoutResposta);
+		linearLayoutContinuar = findViewById(R.id.linearLayoutContinuar);
+		imageButtonPregunta = findViewById(R.id.imageButtonPregunta);
+		imageButtonResposta = findViewById(R.id.imageButtonResposta);
+		imageButtonContinuar = findViewById(R.id.imageButtonContinuar);
+		textViewPregunta = findViewById(R.id.textViewPregunta);
+		textViewResposta = findViewById(R.id.textViewRespota);
+		textViewTitle = findViewById(R.id.textViewTitle);
+		tableLayout = findViewById(R.id.tableLayout);
+		imageView = findViewById(R.id.imageViewMain);
+		imageButton001 = findViewById(R.id.imageButton001);
+		imageButton002 = findViewById(R.id.imageButton002);
+		imageButton003 = findViewById(R.id.imageButton003);
+		imageButton004 = findViewById(R.id.imageButton004);
+		imageButton005 = findViewById(R.id.imageButton005);
+		imageButton006 = findViewById(R.id.imageButton006);
+		imageButton007 = findViewById(R.id.imageButton007);
+		imageButton008 = findViewById(R.id.imageButton008);
+		imageButton009 = findViewById(R.id.imageButton009);
+		imageButton010 = findViewById(R.id.imageButton010);
+		imageButton011 = findViewById(R.id.imageButton011);
+		imageButton012 = findViewById(R.id.imageButton012);
+	}
 
-    public void imageButtonPreguntaOnClick(View v)
-    {
-        setState(0);
-    }
+	public void imageButtonPreguntaOnClick(View v)
+	{
+		setState(0);
+	}
 
-    public void imageButtonRespostaOnClick(View v)
-    {
-        setState(1);
-    }
+	public void imageButtonRespostaOnClick(View v)
+	{
+		setState(1);
+	}
 
-    public void imageButtonContinuarOnClick(View v)
-    {
-        setState(2);
-    }
+	public void imageButtonContinuarOnClick(View v)
+	{
+		setState(2);
+	}
 }
