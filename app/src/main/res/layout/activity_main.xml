@@ -73,7 +73,7 @@
         android:layout_marginTop="49dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textSize="14sp"
+        android:textColorLink="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,16 +81,16 @@
         app:layout_constraintVertical_bias="0.175"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageButton
-        android:id="@+id/imageButton8"
-        android:layout_width="128dp"
-        android:layout_height="127dp"
-        android:layout_marginTop="44dp"
+    <ImageView
+        android:id="@+id/fletxa"
+        android:layout_width="136dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etnom"
-        app:layout_constraintVertical_bias="0.304"
-        app:srcCompat="@drawable/tick" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/fletxa" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
