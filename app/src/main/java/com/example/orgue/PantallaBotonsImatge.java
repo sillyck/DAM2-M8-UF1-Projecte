@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -213,18 +214,18 @@ public class PantallaBotonsImatge extends AppCompatActivity
 	{
 		switch(num)
 		{
-			case  1: imageButton001.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
-			case  2: imageButton002.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
-			case  3: imageButton003.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
-			case  4: imageButton004.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
-			case  5: imageButton005.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
-			case  6: imageButton006.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
-			case  7: imageButton007.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
-			case  8: imageButton008.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
-			case  9: imageButton009.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
-			case 10: imageButton010.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
-			case 11: imageButton011.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
-			case 12: imageButton012.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
+			case  1: imageButton001.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case  2: imageButton002.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case  3: imageButton003.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case  4: imageButton004.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case  5: imageButton005.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case  6: imageButton006.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case  7: imageButton007.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case  8: imageButton008.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case  9: imageButton009.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case 10: imageButton010.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case 11: imageButton011.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case 12: imageButton012.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
 		}
 	}
 }
