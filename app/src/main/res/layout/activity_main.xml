@@ -91,6 +91,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etnom"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/fletxa" />
+        app:srcCompat="@drawable/fletxa"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
