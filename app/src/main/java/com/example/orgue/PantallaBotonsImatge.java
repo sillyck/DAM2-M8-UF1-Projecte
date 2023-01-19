@@ -164,9 +164,9 @@ public class PantallaBotonsImatge extends AppCompatActivity
 	{
 		if(state==1)
 		{
-		setState(2);
-		selectedAnswer = click;
-		highlightAnswers();
+			setState(2);
+			selectedAnswer = click;
+			highlightAnswers();
 		}
 	}
 
@@ -182,6 +182,7 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		}
 	}
 
+	@SuppressWarnings("unused")
 	public void paintColourTableButton(int column, int row, boolean correct)
 	{
 		paintColourTableButton(column,row,correct,true);
