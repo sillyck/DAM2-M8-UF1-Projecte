@@ -162,19 +162,21 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		{
 			setState(2);
 			selectedAnswer = click;
-			highlightAnswers();
+			highlightAnswers(true);
 		}
 	}
 
-	public void highlightAnswers()
+	public void highlightAnswers(boolean highlight)
 	{
 		if(selectedAnswer!=-1 && selectedAnswer==correctAnswer)
 		{
-			paintColourTableButton(selectedAnswer,true);
+			didItGetItRight = 1;
+			if(highlight) paintColourTableButton(selectedAnswer,true);
 		}
 		else if(selectedAnswer!=-1 && selectedAnswer!=correctAnswer)
 		{
-			paintColourTableButton(selectedAnswer,false);
+			didItGetItRight = 0;
+			if(highlight) paintColourTableButton(selectedAnswer,false);
 		}
 	}
 
