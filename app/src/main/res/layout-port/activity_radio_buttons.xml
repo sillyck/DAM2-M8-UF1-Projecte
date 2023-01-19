@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7AC5DD">
+
+    <TextView
+        android:id="@+id/benvinguda"
+        android:layout_width="468dp"
+        android:layout_height="78dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Quants escuts de la ciutat has pogut comptabilitzar al llarg de la visita?"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <ImageView
+        android:id="@+id/foto"
+        android:layout_width="441dp"
+        android:layout_height="301dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/benvinguda"
+        app:srcCompat="@drawable/escut" />
+
+    <ImageButton
+        android:id="@+id/fletxa"
+        android:layout_width="136dp"
+        android:layout_height="153dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/fletxa"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <RadioGroup
+        android:layout_width="233dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foto">
+
+        <RadioButton
+            android:id="@+id/resposta1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="50px"
+            android:paddingBottom="50px"
+            android:text="Entre 10 i 20"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="50px"
+            android:paddingBottom="50px"
+            android:text="Entre 21 i 40"
+            android:textSize="30sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="50px"
+            android:paddingBottom="50px"
+            android:text="Més de 41"
+            android:textSize="30sp" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
