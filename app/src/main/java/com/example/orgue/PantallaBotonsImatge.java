@@ -37,6 +37,24 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		setContentView(R.layout.activity_botons_imatge);
 
 		identificarComponents();
+//		imageButtonPregunta.setMaxHeight(imageButtonPregunta.getWidth());
+//		imageButtonPregunta.setMinimumHeight(imageButtonPregunta.getWidth());
+//		imageButtonResposta.setMaxHeight(imageButtonResposta.getWidth());
+//		imageButtonResposta.setMinimumHeight(imageButtonResposta.getWidth());
+//		imageButtonContinuar.setMaxHeight(imageButtonContinuar.getWidth());
+//		imageButtonContinuar.setMinimumHeight(imageButtonContinuar.getWidth());
+//
+//		int width = imageButtonPregunta.getMeasuredWidth();
+//		int height = imageButtonPregunta.getMeasuredHeight();
+//
+		// Optimization so we don't measure twice unless we need to
+//		if (width != height) {
+//			imageButtonPregunta.setMeasuredDimension(width, width);
+//		}
+
+//		ImageButton ib = (ImageButton) findViewById(R.id.myImageButton);
+//		ib.setMaxHeight(ib.getWidth());
+		imageButtonPregunta.setMaxHeight(imageButtonPregunta.getWidth());
 
 		setState(0);
 	}
