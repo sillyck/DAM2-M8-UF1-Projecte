@@ -11,10 +11,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        // WARNING!
-        // ========
-        // REMOVE THIS LINE OF CODE WHEN MERGING; JUST HERE FOR TESTING PROPUSES
-        startActivity(new Intent(this, PantallaBotonsImatge.class));
     }
 }
