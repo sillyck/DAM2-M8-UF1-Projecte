@@ -184,7 +184,8 @@
 		android:layout_width="803dp"
 		android:layout_height="113dp"
 		android:orientation="horizontal"
-		app:layout_constraintBottom_toBottomOf="parent">
+		app:layout_constraintBottom_toBottomOf="parent"
+		tools:ignore="MissingConstraints">
 
 		<View
 			android:id="@+id/viewResposta"
@@ -220,7 +221,8 @@
 		android:layout_width="810dp"
 		android:layout_height="117dp"
 		android:orientation="horizontal"
-		app:layout_constraintBottom_toBottomOf="parent">
+		app:layout_constraintBottom_toBottomOf="parent"
+		tools:ignore="MissingConstraints">
 
 		<View
 			android:id="@+id/viewContinuar"
