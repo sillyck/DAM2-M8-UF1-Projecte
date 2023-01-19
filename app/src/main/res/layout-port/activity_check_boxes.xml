@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7AC5DD">
+
+    <TextView
+        android:id="@+id/benvinguda"
+        android:layout_width="487dp"
+        android:layout_height="110dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Mireu bé la façana de l’orgue i trieu de totes aquestes parts les que són visibles."
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <ImageButton
+        android:id="@+id/fletxa"
+        android:layout_width="136dp"
+        android:layout_height="153dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/fletxa"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/teclat"
+        android:layout_width="213dp"
+        android:layout_height="157dp"
+        android:layout_marginStart="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/poms"
+        app:srcCompat="@drawable/teclat"
+        tools:layout_editor_absoluteY="271dp" />
+
+    <RadioGroup
+        android:id="@+id/grup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="316dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <CheckBox
+            android:id="@+id/opcio6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:layout_marginBottom="50px"
+            android:text="Pedaler"
+            android:textSize="30sp" />
+
+        <CheckBox
+            android:id="@+id/opcio7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:layout_marginBottom="50px"
+            android:text="Poms dels registres"
+            android:textSize="30sp" />
+
+        <CheckBox
+            android:id="@+id/opcio8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:layout_marginBottom="50px"
+            android:text="Secret"
+            android:textSize="30sp" />
+
+        <CheckBox
+            android:id="@+id/opcio9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:layout_marginBottom="50px"
+            android:text="Tubs"
+            android:textSize="30sp" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/grup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="264dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <CheckBox
+            android:id="@+id/opcio1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:layout_marginBottom="50px"
+            android:text="Barnilles"
+            android:textSize="30sp" />
+
+        <CheckBox
+            android:id="@+id/opcio2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:layout_marginBottom="50px"
+            android:text="Caixa de l’expressiur"
+            android:textSize="30sp" />
+
+        <CheckBox
+            android:id="@+id/opcio3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:layout_marginBottom="50px"
+            android:text="Manuals"
+            android:textSize="30sp" />
+
+        <CheckBox
+            android:id="@+id/opcio4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:layout_marginBottom="50px"
+            android:text="Manxes"
+            android:textSize="30sp" />
+
+        <CheckBox
+            android:id="@+id/opcio5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px"
+            android:layout_marginBottom="50px"
+            android:text="Pedal de l’expressiu"
+            android:textSize="30sp" />
+
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/pedals"
+        android:layout_width="253dp"
+        android:layout_height="191dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/pedaler"
+        tools:layout_editor_absoluteY="247dp" />
+
+    <ImageView
+        android:id="@+id/poms"
+        android:layout_width="213dp"
+        android:layout_height="172dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="268dp"
+        android:rotation="90"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/pedals"
+        app:srcCompat="@drawable/pomsregistres"
+        tools:layout_editor_absoluteY="256dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
