@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
-@SuppressWarnings({"FieldCanBeLocal", "unused"})
+@SuppressWarnings({"FieldCanBeLocal", "unused", "SpellCheckingInspection"})
 public class PantallaBotonsImatge extends AppCompatActivity
 {
 	public int state = 0;
@@ -149,6 +149,7 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		}
 	}
 
+	@SuppressWarnings("ConstantConditions")
 	public void highlightAnswers(boolean highlight)
 	{
 		if(selectedAnswer!=-1 && selectedAnswer==correctAnswer)
