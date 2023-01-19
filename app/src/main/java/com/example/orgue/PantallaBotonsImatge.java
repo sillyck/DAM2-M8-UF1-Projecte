@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
+@SuppressWarnings({"FieldCanBeLocal", "unused"})
 public class PantallaBotonsImatge extends AppCompatActivity
 {
 	public int state = 0;
