@@ -141,21 +141,38 @@
 		android:layout_width="783dp"
 		android:layout_height="107dp"
 		android:orientation="horizontal"
-		app:layout_constraintBottom_toBottomOf="parent">
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent">
 
 		<com.example.orgue.SquareImageButton
 			android:id="@+id/imageButtonPregunta"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:adjustViewBounds="true"
+			android:baselineAlignBottom="false"
+			android:clickable="true"
+			android:contextClickable="false"
+			android:cropToPadding="false"
 			android:onClick="imageButtonPreguntaOnClick"
-			app:srcCompat="@drawable/openmoji_2b05_color" />
+			android:rotation="180"
+			app:srcCompat="@drawable/fletxa" />
+		<!--			android:background="@drawable/fletxa"-->
 
-		<TextView
+		<EditText
 			android:id="@+id/textViewPregunta"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:autoText="true"
+			android:enabled="false"
 			android:text="Pregunta"
 			tools:ignore="HardcodedText" />
+
+		<View
+			android:id="@+id/viewPregunta"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:layout_weight="1" />
 	</LinearLayout>
 
 	<LinearLayout
@@ -171,10 +188,12 @@
 			android:layout_height="0dp"
 			android:layout_weight="1" />
 
-		<TextView
+		<EditText
 			android:id="@+id/textViewRespota"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:autoText="true"
+			android:enabled="false"
 			android:text="Resposta"
 			tools:ignore="HardcodedText" />
 
@@ -182,8 +201,10 @@
 			android:id="@+id/imageButtonResposta"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:adjustViewBounds="true"
 			android:onClick="imageButtonRespostaOnClick"
-			app:srcCompat="@drawable/openmoji_27a1_color" />
+			app:srcCompat="@drawable/fletxa" />
+<!--			android:background="@drawable/fletxa"-->
 	</LinearLayout>
 
 	<LinearLayout
@@ -203,10 +224,11 @@
 			android:id="@+id/imageButtonContinuar"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:adjustViewBounds="true"
+			android:onClick="imageButtonContinuarOnClick"
 			android:scaleX="4"
 			android:scaleY="4"
-			app:srcCompat="@android:drawable/checkbox_on_background"
-			android:onClick="imageButtonContinuarOnClick"/>
+			app:srcCompat="@android:drawable/checkbox_on_background" />
 	</LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

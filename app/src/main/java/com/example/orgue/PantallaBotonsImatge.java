@@ -54,7 +54,7 @@ public class PantallaBotonsImatge extends AppCompatActivity
 
 //		ImageButton ib = (ImageButton) findViewById(R.id.myImageButton);
 //		ib.setMaxHeight(ib.getWidth());
-		imageButtonPregunta.setMaxHeight(imageButtonPregunta.getWidth());
+//		imageButtonPregunta.setMaxHeight(imageButtonPregunta.getWidth());
 
 		setState(0);
 	}
