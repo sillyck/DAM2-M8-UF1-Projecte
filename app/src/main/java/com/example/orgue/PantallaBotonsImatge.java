@@ -58,6 +58,19 @@ public class PantallaBotonsImatge extends AppCompatActivity
 //		ib.setMaxHeight(ib.getWidth());
 //		imageButtonPregunta.setMaxHeight(imageButtonPregunta.getWidth());
 
+		imageButton001.setOnClickListener(v -> answerCommonOnClick(1));
+		imageButton002.setOnClickListener(v -> answerCommonOnClick(2));
+		imageButton003.setOnClickListener(v -> answerCommonOnClick(3));
+		imageButton004.setOnClickListener(v -> answerCommonOnClick(4));
+		imageButton005.setOnClickListener(v -> answerCommonOnClick(5));
+		imageButton006.setOnClickListener(v -> answerCommonOnClick(6));
+		imageButton007.setOnClickListener(v -> answerCommonOnClick(7));
+		imageButton008.setOnClickListener(v -> answerCommonOnClick(8));
+		imageButton009.setOnClickListener(v -> answerCommonOnClick(9));
+		imageButton010.setOnClickListener(v -> answerCommonOnClick(10));
+		imageButton011.setOnClickListener(v -> answerCommonOnClick(11));
+		imageButton012.setOnClickListener(v -> answerCommonOnClick(12));
+
 		setState(0);
 	}
 
