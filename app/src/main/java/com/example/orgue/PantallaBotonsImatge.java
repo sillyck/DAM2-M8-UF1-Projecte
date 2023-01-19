@@ -144,4 +144,71 @@ public class PantallaBotonsImatge extends AppCompatActivity
 	{
 		setState(2);
 	}
+
+	public void answerCommonOnClick(int click)
+	{
+		if(state==1)
+		{
+		setState(2);
+		selectedAnswer = click;
+		highlightAnswers();
+		}
+	}
+
+	public void highlightAnswers()
+	{
+		if(selectedAnswer!=-1 && selectedAnswer==correctAnswer)
+		{
+			paintColourTableButton(selectedAnswer,true);
+		}
+		else if(selectedAnswer!=-1 && selectedAnswer!=correctAnswer)
+		{
+			paintColourTableButton(selectedAnswer,false);
+		}
+	}
+
+	public void paintColourTableButton(int column, int row, boolean correct)
+	{
+		paintColourTableButton(column,row,correct,true);
+	}
+
+	public void paintColourTableButton(int column, int row, boolean correct, boolean startsAtZero)
+	{
+		if(!startsAtZero)
+		{
+			column++;
+			row++;
+		}
+			 if(row==0 && column==0) paintColourTableButton( 1,correct);
+		else if(row==0 && column==1) paintColourTableButton( 2,correct);
+		else if(row==0 && column==2) paintColourTableButton( 3,correct);
+		else if(row==1 && column==0) paintColourTableButton( 4,correct);
+		else if(row==1 && column==1) paintColourTableButton( 5,correct);
+		else if(row==1 && column==2) paintColourTableButton( 6,correct);
+		else if(row==2 && column==0) paintColourTableButton( 7,correct);
+		else if(row==2 && column==1) paintColourTableButton( 8,correct);
+		else if(row==2 && column==2) paintColourTableButton( 9,correct);
+		else if(row==3 && column==0) paintColourTableButton(10,correct);
+		else if(row==3 && column==1) paintColourTableButton(11,correct);
+		else if(row==3 && column==2) paintColourTableButton(12,correct);
+	}
+
+	public void paintColourTableButton(int num, boolean correct)
+	{
+		switch(num)
+		{
+			case  1: imageButton001.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
+			case  2: imageButton002.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
+			case  3: imageButton003.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
+			case  4: imageButton004.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
+			case  5: imageButton005.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
+			case  6: imageButton006.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
+			case  7: imageButton007.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
+			case  8: imageButton008.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
+			case  9: imageButton009.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
+			case 10: imageButton010.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
+			case 11: imageButton011.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
+			case 12: imageButton012.setBackgroundTintList(correct ? ColorStateList.valueOf(getResources().getColor(R.color.teal_200)) : ColorStateList.valueOf(getResources().getColor(R.color.purple_200))); break;
+		}
+	}
 }
