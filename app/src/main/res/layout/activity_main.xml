@@ -81,7 +81,7 @@
         app:layout_constraintVertical_bias="0.175"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/fletxa"
         android:layout_width="136dp"
         android:layout_height="153dp"
