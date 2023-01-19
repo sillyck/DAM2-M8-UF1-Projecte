@@ -22,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View v) {
-        startActivity(new Intent(MainActivity.this, SeguentActivity.class));
+        //
+        // Uncomment when class ready, otherwise it errors on compile!
+        //
+
+        // startActivity(new Intent(MainActivity.this, SeguentActivity.class));
     }
 }
