@@ -2,9 +2,7 @@ package com.example.orgue;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -13,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
+@SuppressWarnings({"FieldCanBeLocal", "unused", "SpellCheckingInspection"})
 public class PantallaBotonsImatge extends AppCompatActivity
 {
 	public int state = 0;
@@ -37,24 +36,19 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		setContentView(R.layout.activity_botons_imatge);
 
 		identificarComponents();
-//		imageButtonPregunta.setMaxHeight(imageButtonPregunta.getWidth());
-//		imageButtonPregunta.setMinimumHeight(imageButtonPregunta.getWidth());
-//		imageButtonResposta.setMaxHeight(imageButtonResposta.getWidth());
-//		imageButtonResposta.setMinimumHeight(imageButtonResposta.getWidth());
-//		imageButtonContinuar.setMaxHeight(imageButtonContinuar.getWidth());
-//		imageButtonContinuar.setMinimumHeight(imageButtonContinuar.getWidth());
-//
-//		int width = imageButtonPregunta.getMeasuredWidth();
-//		int height = imageButtonPregunta.getMeasuredHeight();
-//
-		// Optimization so we don't measure twice unless we need to
-//		if (width != height) {
-//			imageButtonPregunta.setMeasuredDimension(width, width);
-//		}
 
-//		ImageButton ib = (ImageButton) findViewById(R.id.myImageButton);
-//		ib.setMaxHeight(ib.getWidth());
-		imageButtonPregunta.setMaxHeight(imageButtonPregunta.getWidth());
+		imageButton001.setOnClickListener(v -> answerCommonOnClick(1));
+		imageButton002.setOnClickListener(v -> answerCommonOnClick(2));
+		imageButton003.setOnClickListener(v -> answerCommonOnClick(3));
+		imageButton004.setOnClickListener(v -> answerCommonOnClick(4));
+		imageButton005.setOnClickListener(v -> answerCommonOnClick(5));
+		imageButton006.setOnClickListener(v -> answerCommonOnClick(6));
+		imageButton007.setOnClickListener(v -> answerCommonOnClick(7));
+		imageButton008.setOnClickListener(v -> answerCommonOnClick(8));
+		imageButton009.setOnClickListener(v -> answerCommonOnClick(9));
+		imageButton010.setOnClickListener(v -> answerCommonOnClick(10));
+		imageButton011.setOnClickListener(v -> answerCommonOnClick(11));
+		imageButton012.setOnClickListener(v -> answerCommonOnClick(12));
 
 		setState(0);
 	}
@@ -143,5 +137,76 @@ public class PantallaBotonsImatge extends AppCompatActivity
 	public void imageButtonContinuarOnClick(View v)
 	{
 		setState(2);
+	}
+
+	public void answerCommonOnClick(int click)
+	{
+		if(state==1)
+		{
+			setState(2);
+			selectedAnswer = click;
+			highlightAnswers(true);
+		}
+	}
+
+	@SuppressWarnings("ConstantConditions")
+	public void highlightAnswers(boolean highlight)
+	{
+		if(selectedAnswer!=-1 && selectedAnswer==correctAnswer)
+		{
+			didItGetItRight = 1;
+			if(highlight) paintColourTableButton(selectedAnswer,true);
+		}
+		else if(selectedAnswer!=-1 && selectedAnswer!=correctAnswer)
+		{
+			didItGetItRight = 0;
+			if(highlight) paintColourTableButton(selectedAnswer,false);
+		}
+	}
+
+	@SuppressWarnings("unused")
+	public void paintColourTableButton(int column, int row, boolean correct)
+	{
+		paintColourTableButton(column,row,correct,true);
+	}
+
+	public void paintColourTableButton(int column, int row, boolean correct, boolean startsAtZero)
+	{
+		if(!startsAtZero)
+		{
+			column++;
+			row++;
+		}
+			 if(row==0 && column==0) paintColourTableButton( 1,correct);
+		else if(row==0 && column==1) paintColourTableButton( 2,correct);
+		else if(row==0 && column==2) paintColourTableButton( 3,correct);
+		else if(row==1 && column==0) paintColourTableButton( 4,correct);
+		else if(row==1 && column==1) paintColourTableButton( 5,correct);
+		else if(row==1 && column==2) paintColourTableButton( 6,correct);
+		else if(row==2 && column==0) paintColourTableButton( 7,correct);
+		else if(row==2 && column==1) paintColourTableButton( 8,correct);
+		else if(row==2 && column==2) paintColourTableButton( 9,correct);
+		else if(row==3 && column==0) paintColourTableButton(10,correct);
+		else if(row==3 && column==1) paintColourTableButton(11,correct);
+		else if(row==3 && column==2) paintColourTableButton(12,correct);
+	}
+
+	public void paintColourTableButton(int num, boolean correct)
+	{
+		switch(num)
+		{
+			case  1: imageButton001.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case  2: imageButton002.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case  3: imageButton003.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case  4: imageButton004.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case  5: imageButton005.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case  6: imageButton006.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case  7: imageButton007.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case  8: imageButton008.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case  9: imageButton009.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case 10: imageButton010.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case 11: imageButton011.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+			case 12: imageButton012.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+		}
 	}
 }

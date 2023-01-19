@@ -18,7 +18,8 @@
 		android:textStyle="bold"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
+		app:layout_constraintTop_toTopOf="parent"
+		tools:ignore="HardcodedText" />
 
 	<ImageView
 		android:id="@+id/imageViewMain"
@@ -35,8 +36,8 @@
 
 	<TableLayout
 		android:id="@+id/tableLayout"
-		android:layout_width="409dp"
-		android:layout_height="729dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
 		app:layout_constraintBottom_toTopOf="@+id/linearLayoutPregunta"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
@@ -141,21 +142,40 @@
 		android:layout_width="783dp"
 		android:layout_height="107dp"
 		android:orientation="horizontal"
-		app:layout_constraintBottom_toBottomOf="parent">
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent">
 
 		<com.example.orgue.SquareImageButton
 			android:id="@+id/imageButtonPregunta"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:adjustViewBounds="true"
+			android:baselineAlignBottom="false"
+			android:clickable="true"
+			android:contextClickable="false"
+			android:cropToPadding="false"
 			android:onClick="imageButtonPreguntaOnClick"
-			app:srcCompat="@drawable/openmoji_2b05_color" />
+			android:rotation="180"
+			app:srcCompat="@drawable/fletxa" />
 
 		<TextView
 			android:id="@+id/textViewPregunta"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:enabled="false"
 			android:text="Pregunta"
+			android:textSize="50sp"
+			android:textColor="#023465"
+			android:layout_marginStart="10dp"
+			app:autoSizeTextType="uniform"
 			tools:ignore="HardcodedText" />
+
+		<View
+			android:id="@+id/viewPregunta"
+			android:layout_width="0dp"
+			android:layout_height="0dp"
+			android:layout_weight="1" />
 	</LinearLayout>
 
 	<LinearLayout
@@ -163,7 +183,8 @@
 		android:layout_width="803dp"
 		android:layout_height="113dp"
 		android:orientation="horizontal"
-		app:layout_constraintBottom_toBottomOf="parent">
+		app:layout_constraintBottom_toBottomOf="parent"
+		tools:ignore="MissingConstraints">
 
 		<View
 			android:id="@+id/viewResposta"
@@ -175,15 +196,21 @@
 			android:id="@+id/textViewRespota"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:enabled="false"
 			android:text="Resposta"
+			android:textSize="50sp"
+			android:textColor="#023465"
+			android:layout_marginEnd="10dp"
+			app:autoSizeTextType="uniform"
 			tools:ignore="HardcodedText" />
 
 		<com.example.orgue.SquareImageButton
 			android:id="@+id/imageButtonResposta"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:adjustViewBounds="true"
 			android:onClick="imageButtonRespostaOnClick"
-			app:srcCompat="@drawable/openmoji_27a1_color" />
+			app:srcCompat="@drawable/fletxa" />
 	</LinearLayout>
 
 	<LinearLayout
@@ -191,7 +218,8 @@
 		android:layout_width="810dp"
 		android:layout_height="117dp"
 		android:orientation="horizontal"
-		app:layout_constraintBottom_toBottomOf="parent">
+		app:layout_constraintBottom_toBottomOf="parent"
+		tools:ignore="MissingConstraints">
 
 		<View
 			android:id="@+id/viewContinuar"
@@ -203,10 +231,10 @@
 			android:id="@+id/imageButtonContinuar"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:adjustViewBounds="true"
+			android:onClick="imageButtonContinuarOnClick"
 			android:scaleX="4"
 			android:scaleY="4"
-			app:srcCompat="@android:drawable/checkbox_on_background"
-			android:onClick="imageButtonContinuarOnClick"/>
+			app:srcCompat="@android:drawable/checkbox_on_background" />
 	</LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
