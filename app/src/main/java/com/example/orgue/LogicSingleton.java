@@ -2,22 +2,20 @@ package com.example.orgue;
 
 import android.content.Context;
 import android.content.Intent;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.Dictionary;
+import java.util.HashMap;
+import java.util.Map;
 
 public class LogicSingleton
 {
     private static String playerName;
     private static int currentQuestion;
-    private static Dictionary<Integer,QuestionInformation> questionDatabase;
-
+    private static Map<Integer,QuestionInformation> questionDatabase;
 
     public static void Initialize()
     {
         playerName = "";
         currentQuestion = 0;
+        questionDatabase = new HashMap<>();
         PushInformationToDatabase();
     }
 
