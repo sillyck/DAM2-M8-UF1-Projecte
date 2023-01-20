@@ -136,7 +136,7 @@ public class PantallaBotonsImatge extends AppCompatActivity
 
 	public void imageButtonContinuarOnClick(View v)
 	{
-		setState(2);
+		startActivity(LogicSingleton.NextQuestion(PantallaBotonsImatge.this));
 	}
 
 	public void answerCommonOnClick(int click)
