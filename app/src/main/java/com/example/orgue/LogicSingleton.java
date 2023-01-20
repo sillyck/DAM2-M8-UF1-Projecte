@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class LogicSingleton
 {
@@ -48,7 +49,7 @@ public class LogicSingleton
 
     private static Intent WhatActivityShouldBeLoaded(Context currentContext, int num)
     {
-        if(questionDatabase.containsKey(num)) return new Intent(currentContext,questionDatabase.get(num).questionClass);
+        if(questionDatabase.containsKey(num)) return new Intent(currentContext, Objects.requireNonNull(questionDatabase.get(num)).questionClass);
         else return null;
     }
 
