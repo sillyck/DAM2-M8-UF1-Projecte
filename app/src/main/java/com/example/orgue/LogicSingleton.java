@@ -34,7 +34,10 @@ public class LogicSingleton
         return currentQuestion;
     }
 
-
+    public static QuestionInformation getCurrentQuestionInformation()
+    {
+        return questionDatabase.get(currentQuestion);
+    }
 
     public static Intent NextQuestion(Context currentContext)
     {
