@@ -60,7 +60,32 @@ public class LogicSingleton
 
     private static void PushInformationToDatabase()
     {
-        questionDatabase.put(1,new QuestionInformation(PantallaBotonsImatge.class,"",new String[]{"",""},new String[]{"",""},new String[]{"",""},false));
-        
+        questionDatabase.put(0,new QuestionInformation
+        (
+            MainActivity.class,
+            "",
+            new String[]{""},
+            new String[]{""},
+            new String[]{""},
+            true
+        ));
+        questionDatabase.put(1,new QuestionInformation
+        (
+            PantallaBotonsImatge.class,
+            "",
+            new String[]{""},
+            new String[]{""},
+            new String[]{""},
+            false
+        ));
+        questionDatabase.put(2,new QuestionInformation
+        (
+            PantallaBotonsImatge.class,
+            "",
+            new String[]{""},
+            new String[]{""},
+            new String[]{""},
+            false
+        ));
     }
 }
