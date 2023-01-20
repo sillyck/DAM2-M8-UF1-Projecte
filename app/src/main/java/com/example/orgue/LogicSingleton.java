@@ -46,14 +46,16 @@ public class LogicSingleton
         throw new NullPointerException();
     }
 
-    public static Intent WhatActivityShouldBeLoaded(Context currentContext, int num)
+    private static Intent WhatActivityShouldBeLoaded(Context currentContext, int num)
     {
-        switch(num)
-        {
-            case 1: return new Intent(currentContext, PantallaBotonsImatge.class);
-            case 2: return new Intent(currentContext, PantallaBotonsImatge.class);
-            default: return null;
-        }
+//        switch(num)
+//        {
+//            case 1: return new Intent(currentContext, PantallaBotonsImatge.class);
+//            case 2: return new Intent(currentContext, PantallaBotonsImatge.class);
+//            default: return null;
+//        }
+        if(questionDatabase.containsKey(num)) return new Intent(currentContext,questionDatabase.get(num).questionClass);
+        else return null;
     }
 
     private static void PushInformationToDatabase()
