@@ -48,12 +48,6 @@ public class LogicSingleton
 
     private static Intent WhatActivityShouldBeLoaded(Context currentContext, int num)
     {
-//        switch(num)
-//        {
-//            case 1: return new Intent(currentContext, PantallaBotonsImatge.class);
-//            case 2: return new Intent(currentContext, PantallaBotonsImatge.class);
-//            default: return null;
-//        }
         if(questionDatabase.containsKey(num)) return new Intent(currentContext,questionDatabase.get(num).questionClass);
         else return null;
     }
