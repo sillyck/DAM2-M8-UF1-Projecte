@@ -9,10 +9,7 @@ public class QuestionInformation
     public String[] answers;
     public boolean aloneInItsType;
 
-    public QuestionInformation()
-    {
-
-    }
+    public QuestionInformation() { }
 
     public QuestionInformation(Class questionClass, String questionTitle, String[] images, String[] texts, String[] answers, boolean aloneInItsType)
     {
