@@ -25,8 +25,11 @@ public class MainActivity extends AppCompatActivity
 
     public void onClick()
     {
-        LogicSingleton.Initialize();
-        LogicSingleton.SetNewPlayerName(nom.getText().toString());
-        startActivity(LogicSingleton.NextQuestion(MainActivity.this));
+        if(!nom.getText().toString().isEmpty())
+        {
+            LogicSingleton.Initialize();
+            LogicSingleton.SetNewPlayerName(nom.getText().toString());
+            startActivity(LogicSingleton.NextQuestion(MainActivity.this));
+        }
     }
 }
