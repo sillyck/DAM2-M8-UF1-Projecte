@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity
 
     public void onClick()
     {
-        startActivity(new Intent(MainActivity.this, PantallaBotonsImatge.class));
+        LogicSingleton.Initialize();
+        LogicSingleton.SetNewPlayerName(nom.getText().toString());
+        startActivity(LogicSingleton.NextQuestion(MainActivity.this));
     }
 }
