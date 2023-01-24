@@ -2,6 +2,7 @@ package com.example.orgue;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -12,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import androidx.core.app.CoreComponentFactory;
 
 @SuppressWarnings({"FieldCanBeLocal", "unused", "SpellCheckingInspection"})
 public class PantallaBotonsImatge extends AppCompatActivity
@@ -51,6 +53,7 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		imageButton010.setOnClickListener(v -> answerCommonOnClick(10));
 		imageButton011.setOnClickListener(v -> answerCommonOnClick(11));
 		imageButton012.setOnClickListener(v -> answerCommonOnClick(12));
+		imageButtonContinuar.setOnClickListener(v -> imageButtonContinuarOnClick());
 
 		setThingsToQuestion(LogicSingleton.GetCurrentQuestion());
 
@@ -138,9 +141,10 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		setState(1);
 	}
 
-	public void imageButtonContinuarOnClick(View v)
+	public void imageButtonContinuarOnClick(/*View v*/)
 	{
-		startActivity(LogicSingleton.NextQuestion(PantallaBotonsImatge.this));
+		Intent intent = new Intent(LogicSingleton.NextQuestion(PantallaBotonsImatge.this));
+		startActivity(intent);
 	}
 
 	public void answerCommonOnClick(int click)
