@@ -221,12 +221,9 @@ public class PantallaBotonsImatge extends AppCompatActivity
 			case 1:
 				correctAnswer = Integer.parseInt(LogicSingleton.getCurrentQuestionInformation().answers[0]);
 				textViewTitle.setText(LogicSingleton.getCurrentQuestionInformation().questionTitle);
-//				imageView.setImageURI(Uri.parse("R.drawable."+LogicSingleton.getCurrentQuestionInformation().images[1]));
 				imageView.setImageResource(getResources().getIdentifier(LogicSingleton.getCurrentQuestionInformation().images[1],"drawable",getPackageName()));
 				break;
-			default:
-				setThingsToQuestion(1);
-				break;
+			default: setThingsToQuestion(1); break;
 		}
 	}
 }
