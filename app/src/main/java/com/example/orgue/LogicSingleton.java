@@ -74,10 +74,10 @@ public class LogicSingleton
             new QuestionInformation
             (
                 PantallaBotonsImatge.class,
-                "",
-                new String[]{""},
-                new String[]{""},
-                new String[]{""},
+                "Busqueu aquest carrer i situeu-lo al plànol.",
+                new String[]{"@drawable/imatge_lleons_escut_fassana","imatge_lleons_escut_fassana"},
+                new String[]{"Busqueu aquest carrer i situeu-lo al plànol."},
+                new String[]{"10"},
                 false
             )
         );
