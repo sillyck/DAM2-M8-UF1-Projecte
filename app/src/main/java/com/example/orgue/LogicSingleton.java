@@ -55,19 +55,19 @@ public class LogicSingleton
 
     private static void PushInformationToDatabase()
     {
-        questionDatabase.put
-        (
-            0,
-            new QuestionInformation
-            (
-                MainActivity.class,
-                "",
-                new String[]{""},
-                new String[]{""},
-                new String[]{""},
-                true
-            )
-        );
+//        questionDatabase.put
+//        (
+//            0,
+//            new QuestionInformation
+//            (
+//                MainActivity.class,
+//                "",
+//                new String[]{""},
+//                new String[]{""},
+//                new String[]{""},
+//                true
+//            )
+//        );
         questionDatabase.put
         (
             1,
