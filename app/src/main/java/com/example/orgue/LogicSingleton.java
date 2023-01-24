@@ -95,4 +95,28 @@ public class LogicSingleton
             )
         );
     }
+
+    public int calculateCurrentQuestion(String input)
+    {
+        switch(input)
+        {
+            case "1.2": return 1;
+            case "1.4": return 1;
+            case "2.2": return 0;
+            case "3.2": return 0;
+            case "3.3": return 0;
+            case "3.6": return 0;
+            case "4.1": return 0;
+            case "4.4": return 0;
+            case "5.2": return 0;
+            case "5.4": return 0;
+            case "6.2": return 0;
+            case "6.5": return 0;
+            case "7.2": return 0;
+            case "7.4": return 0;
+            case "8": return 0;
+            case "0": return 0;
+            default: return 0;
+        }
+    }
 }
