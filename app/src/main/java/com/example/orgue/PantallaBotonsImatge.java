@@ -227,7 +227,8 @@ public class PantallaBotonsImatge extends AppCompatActivity
 				textViewTitle.setText(LogicSingleton.getCurrentQuestionInformation().questionTitle);
 				imageView.setImageResource(getResources().getIdentifier(LogicSingleton.getCurrentQuestionInformation().images[1],"drawable",getPackageName()));
 				break;
-			default: setThingsToQuestion(1); break;
+			case 2: startActivity(new Intent(PantallaBotonsImatge.this,LogicSingleton.getCurrentQuestionInformation().questionClass));
+//			default: setThingsToQuestion(1); break;
 		}
 	}
 }
