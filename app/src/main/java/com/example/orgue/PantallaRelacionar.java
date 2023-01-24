@@ -12,10 +12,4 @@ public class PantallaRelacionar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
-    Spinner miSpinner = (Spinner) findViewById(R.id.spinner1);
-
-    miSpinner.setPrompt("Seleccione una opción");
-
-
 }
