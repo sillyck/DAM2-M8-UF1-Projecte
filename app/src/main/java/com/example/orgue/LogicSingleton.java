@@ -86,11 +86,11 @@ public class LogicSingleton
             2,
             new QuestionInformation
             (
-                PantallaBotonsImatge.class,
-                "",
-                new String[]{""},
-                new String[]{""},
-                new String[]{""},
+                ActivityRadioButtons.class,
+                "Quants escuts de la ciutat has pogut comptabilitzar al llarg de la visita?",
+                new String[]{"escut"},
+                new String[]{"entre 10 i 20","entre 21 i 40","més de 40"},
+                new String[]{"2"},
                 false
             )
         );
@@ -102,19 +102,19 @@ public class LogicSingleton
         {
             case "1.2": return 1;
             case "1.4": return 1;
-            case "2.2": return 0;
-            case "3.2": return 0;
-            case "3.3": return 0;
-            case "3.6": return 0;
-            case "4.1": return 0;
-            case "4.4": return 0;
-            case "5.2": return 0;
-            case "5.4": return 0;
-            case "6.2": return 0;
-            case "6.5": return 0;
-            case "7.2": return 0;
-            case "7.4": return 0;
-            case "8": return 0;
+            case "2.2": return 2;
+            case "3.2": return 3;
+            case "3.3": return Integer.parseInt(null);
+            case "3.6": return 4;
+            case "4.1": return Integer.parseInt(null);
+            case "4.4": return 5;
+            case "5.2": return 6;
+            case "5.4": return 7;
+            case "6.2": return 8;
+            case "6.5": return 9;
+            case "7.2": return Integer.parseInt(null);
+            case "7.4": return 10;
+            case "8": return 11;
             case "0": return 0;
             default: return 0;
         }
