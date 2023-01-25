@@ -6,12 +6,23 @@
     android:layout_height="match_parent"
     android:background="#7AC5DD">
 
+    <ImageButton
+        android:id="@+id/fletxaEscuts"
+        android:layout_width="123dp"
+        android:layout_height="131dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/fletxa"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
     <TextView
-        android:id="@+id/benvinguda2"
+        android:id="@+id/enunciat"
         android:layout_width="465dp"
         android:layout_height="105dp"
         android:fontFamily="sans-serif-black"
-        android:text="Aquest es el final de la guia, esperem que t'hagui agradat"
+        android:text="Heu recordat de comptar els escuts de la ciutat? \n Ara podeu donar la resposta."
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="28sp"
@@ -22,17 +33,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.125" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="400dp"
-        android:onClick="finish()"
-        android:text="Tancar aplicació"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="572dp"
+        android:layout_height="379dp"
+        android:layout_marginTop="196dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/benvinguda2"
-        app:layout_constraintVertical_bias="0.803" />
+        app:layout_constraintTop_toBottomOf="@+id/enunciat"
+        app:srcCompat="@drawable/escut" />
 </androidx.constraintlayout.widget.ConstraintLayout>
