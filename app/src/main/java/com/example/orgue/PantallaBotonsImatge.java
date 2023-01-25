@@ -220,15 +220,15 @@ public class PantallaBotonsImatge extends AppCompatActivity
 
 	public void setThingsToQuestion(int question)
 	{
-		switch(question)
-		{
-			case 1:
+//		switch(question)
+//		{
+//			case 1:
 				correctAnswer = Integer.parseInt(LogicSingleton.getCurrentQuestionInformation().answers[0]);
 				textViewTitle.setText(LogicSingleton.getCurrentQuestionInformation().questionTitle);
-				imageView.setImageResource(getResources().getIdentifier(LogicSingleton.getCurrentQuestionInformation().images[1],"drawable",getPackageName()));
-				break;
-			case 2: startActivity(new Intent(PantallaBotonsImatge.this,LogicSingleton.getCurrentQuestionInformation().questionClass));
+				imageView.setImageResource(getResources().getIdentifier(LogicSingleton.getCurrentQuestionInformation().images[0],"drawable",getPackageName()));
+//				break;
+//			case 2: startActivity(new Intent(PantallaBotonsImatge.this,LogicSingleton.getCurrentQuestionInformation().questionClass));
 //			default: setThingsToQuestion(1); break;
-		}
+//		}
 	}
 }

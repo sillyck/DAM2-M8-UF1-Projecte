@@ -75,7 +75,7 @@ public class LogicSingleton
             (
                 PantallaBotonsImatge.class,
                 "Busqueu aquest carrer i situeu-lo al plànol.",
-                new String[]{"@drawable/imatge_lleons_escut_fassana","imatge_lleons_escut_fassana"},
+                new String[]{"imatge_lleons_escut_fassana"},
                 new String[]{"Busqueu aquest carrer i situeu-lo al plànol."},
                 new String[]{"10"},
                 false
@@ -92,6 +92,58 @@ public class LogicSingleton
                 new String[]{"entre 10 i 20","entre 21 i 40","més de 40"},
                 new String[]{"2"},
                 false
+            )
+        );
+        questionDatabase.put
+        (
+            3,
+            new QuestionInformation
+            (
+                PantallaBotonsImatge.class,
+                "Segons la imatge, on creieu que estava situat l’orgue anterior? Situeu-lo al plànol",
+                new String[]{"orgue_antic_04"},
+                new String[]{"Segons la imatge, on creieu que estava situat l’orgue anterior? Situeu-lo al plànol"},
+                new String[]{"9"},
+                false
+            )
+        );
+        questionDatabase.put
+        (
+            4,
+            new QuestionInformation
+            (
+                PantallaBotonsImatge.class,
+                "Observeu bé la imatge i responeu.",
+                new String[]{"granorgue"},
+                new String[]{"Observeu bé la imatge i responeu."},
+                new String[]{"6"},
+                false
+            )
+        );
+        questionDatabase.put
+        (
+            5,
+            new QuestionInformation
+            (
+                ActivityRadioButtons.class,
+                "Quina és la relació entre el disseny de la façana del nou orgue i la ciutat de Valls?",
+                new String[]{"simulacio_nou_orgue"},
+                new String[]{"els calçots i els castells","els castells i el campanar","el campanar i els gegants"},
+                new String[]{"1"},
+                false
+            )
+        );
+        questionDatabase.put
+        (
+            6,
+            new QuestionInformation
+            (
+                PantallaRelacionar.class,
+                "Llegeiu i relacioneu cada tipus d'orgue amb la definició que creieu que li correspon.",
+                new String[]{"simulacio_nou_orgue"},
+                new String[]{"els calçots i els castells","els castells i el campanar","el campanar i els gegants"},
+                new String[]{"1"},
+                true
             )
         );
     }

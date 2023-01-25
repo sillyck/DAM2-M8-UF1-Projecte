@@ -19,6 +19,9 @@
             android:name=".ActivityRadioButtons"
             android:exported="false" />
         <activity
+            android:name=".PantallaRelacionar"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

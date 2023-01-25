@@ -34,8 +34,8 @@
 
     <ImageButton
         android:id="@+id/fletxa"
-        android:layout_width="123dp"
-        android:layout_height="131dp"
+        android:layout_width="136dp"
+        android:layout_height="153dp"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,6 +44,7 @@
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="233dp"
         android:layout_height="230dp"
         android:layout_marginTop="100dp"
@@ -55,26 +56,26 @@
             android:id="@+id/resposta1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="50px"
-            android:paddingBottom="50px"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:text="Entre 10 i 20"
             android:textSize="30sp" />
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/resposta2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="50px"
-            android:paddingBottom="50px"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
             android:text="Entre 21 i 40"
             android:textSize="30sp" />
 
         <RadioButton
-            android:id="@+id/radioButton6"
+            android:id="@+id/resposta3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="50px"
-            android:paddingBottom="50px"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:text="Més de 41"
             android:textSize="30sp" />
     </RadioGroup>
