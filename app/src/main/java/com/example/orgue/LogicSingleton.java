@@ -94,6 +94,19 @@ public class LogicSingleton
                 false
             )
         );
+        questionDatabase.put
+        (
+            3,
+            new QuestionInformation
+            (
+                PantallaBotonsImatge.class,
+                "Segons la imatge, on creieu que estava situat l’orgue anterior? Situeu-lo al plànol",
+                new String[]{"escut"},
+                new String[]{"entre 10 i 20","entre 21 i 40","més de 40"},
+                new String[]{"2"},
+                false
+            )
+        );
     }
 
     public int calculateCurrentQuestion(String input)
