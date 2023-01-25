@@ -56,8 +56,8 @@
             android:id="@+id/resposta1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="0dp"
-            android:paddingBottom="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:text="Entre 10 i 20"
             android:textSize="30sp" />
 
@@ -74,8 +74,8 @@
             android:id="@+id/resposta3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:paddingBottom="0dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:text="Més de 41"
             android:textSize="30sp" />
     </RadioGroup>
