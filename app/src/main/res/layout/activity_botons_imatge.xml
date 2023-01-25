@@ -31,8 +31,7 @@
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
-		app:srcCompat="@drawable/imatge_lleons_escut_fassana"
-		tools:srcCompat="@drawable/imatge_lleons_escut_fassana" />
+		app:srcCompat="@drawable/imatge_lleons_escut_fassana"/>
 
 	<TableLayout
 		android:id="@+id/tableLayout"
@@ -232,9 +231,9 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:adjustViewBounds="true"
-			android:onClick="imageButtonContinuarOnClick"
 			android:scaleX="4"
 			android:scaleY="4"
 			app:srcCompat="@android:drawable/checkbox_on_background" />
+<!--			android:onClick="imageButtonContinuarOnClick"-->
 	</LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

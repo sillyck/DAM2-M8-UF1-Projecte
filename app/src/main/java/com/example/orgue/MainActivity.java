@@ -21,10 +21,17 @@ public class MainActivity extends AppCompatActivity
         nom = findViewById(R.id.etnom);
         fletxa = findViewById(R.id.fletxa);
         fletxa.setOnClickListener(v -> onClick());
+
+//        startActivity(new Intent(MainActivity.this, elnom de la pantalla));
     }
 
     public void onClick()
     {
-        startActivity(new Intent(MainActivity.this, PantallaBotonsImatge.class));
+        if(!nom.getText().toString().isEmpty())
+        {
+            LogicSingleton.Initialize();
+            LogicSingleton.SetNewPlayerName(nom.getText().toString());
+            startActivity(LogicSingleton.NextQuestion(MainActivity.this));
+        }
     }
 }

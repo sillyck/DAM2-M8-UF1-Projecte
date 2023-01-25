@@ -2,7 +2,10 @@ package com.example.orgue;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -10,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import androidx.core.app.CoreComponentFactory;
 
 @SuppressWarnings({"FieldCanBeLocal", "unused", "SpellCheckingInspection"})
 public class PantallaBotonsImatge extends AppCompatActivity
@@ -49,6 +53,9 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		imageButton010.setOnClickListener(v -> answerCommonOnClick(10));
 		imageButton011.setOnClickListener(v -> answerCommonOnClick(11));
 		imageButton012.setOnClickListener(v -> answerCommonOnClick(12));
+		imageButtonContinuar.setOnClickListener(v -> imageButtonContinuarOnClick());
+
+		setThingsToQuestion(LogicSingleton.GetCurrentQuestion());
 
 		setState(0);
 	}
@@ -134,9 +141,10 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		setState(1);
 	}
 
-	public void imageButtonContinuarOnClick(View v)
+	public void imageButtonContinuarOnClick(/*View v*/)
 	{
-		setState(2);
+		Intent intent = new Intent(LogicSingleton.NextQuestion(PantallaBotonsImatge.this));
+		startActivity(intent);
 	}
 
 	public void answerCommonOnClick(int click)
@@ -207,6 +215,20 @@ public class PantallaBotonsImatge extends AppCompatActivity
 			case 10: imageButton010.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
 			case 11: imageButton011.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
 			case 12: imageButton012.setBackgroundColor(correct ? Color.rgb(0,255,0) : Color.rgb(255,0,0)); break;
+		}
+	}
+
+	public void setThingsToQuestion(int question)
+	{
+		switch(question)
+		{
+			case 1:
+				correctAnswer = Integer.parseInt(LogicSingleton.getCurrentQuestionInformation().answers[0]);
+				textViewTitle.setText(LogicSingleton.getCurrentQuestionInformation().questionTitle);
+				imageView.setImageResource(getResources().getIdentifier(LogicSingleton.getCurrentQuestionInformation().images[1],"drawable",getPackageName()));
+				break;
+			case 2: startActivity(new Intent(PantallaBotonsImatge.this,LogicSingleton.getCurrentQuestionInformation().questionClass));
+//			default: setThingsToQuestion(1); break;
 		}
 	}
 }
