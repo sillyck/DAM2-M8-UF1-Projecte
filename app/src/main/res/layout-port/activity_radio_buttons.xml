@@ -44,6 +44,7 @@
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="233dp"
         android:layout_height="230dp"
         android:layout_marginTop="100dp"
@@ -56,24 +57,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="0dp"
-            android:paddingBottom="0dp"
+            android:paddingBottom="20dp"
             android:text="Entre 10 i 20"
             android:textSize="30sp" />
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/resposta2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="40dp"
-            android:paddingBottom="40dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
             android:text="Entre 21 i 40"
             android:textSize="30sp" />
 
         <RadioButton
-            android:id="@+id/radioButton6"
+            android:id="@+id/resposta3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="0dp"
+            android:paddingTop="20dp"
             android:paddingBottom="0dp"
             android:text="Més de 41"
             android:textSize="30sp" />
