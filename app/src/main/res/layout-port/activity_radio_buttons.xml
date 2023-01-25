@@ -36,7 +36,7 @@
         android:id="@+id/fletxa"
         android:layout_width="136dp"
         android:layout_height="153dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,8 +55,8 @@
             android:id="@+id/resposta1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="50px"
-            android:paddingBottom="50px"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
             android:text="Entre 10 i 20"
             android:textSize="30sp" />
 
@@ -64,8 +64,8 @@
             android:id="@+id/radioButton5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="50px"
-            android:paddingBottom="50px"
+            android:paddingTop="40dp"
+            android:paddingBottom="40dp"
             android:text="Entre 21 i 40"
             android:textSize="30sp" />
 
@@ -73,8 +73,8 @@
             android:id="@+id/radioButton6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="50px"
-            android:paddingBottom="50px"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
             android:text="Més de 41"
             android:textSize="30sp" />
     </RadioGroup>
