@@ -70,7 +70,7 @@ public class ActivityRadioButtons extends AppCompatActivity
         }
         else if(state==1)
         {
-            startActivity(LogicSingleton.NextQuestion(this));
+            startActivity(LogicSingleton.NextQuestion(ActivityRadioButtons.this));
         }
     }
 
@@ -128,24 +128,24 @@ public class ActivityRadioButtons extends AppCompatActivity
         {
             switch(selectedAnswer)
             {
-                case 0: radioButton1.setBackgroundColor(Color.rgb(0,255,0)); break;
-                case 1: radioButton2.setBackgroundColor(Color.rgb(0,255,0)); break;
-                case 2: radioButton3.setBackgroundColor(Color.rgb(0,255,0)); break;
+                case 0: radioButton1.setBackgroundColor(Color.rgb(162, 240, 163)); break;
+                case 1: radioButton2.setBackgroundColor(Color.rgb(162, 240, 163)); break;
+                case 2: radioButton3.setBackgroundColor(Color.rgb(162, 240, 163)); break;
             }
         }
         else if(didItGetItRight==0)
         {
             switch(selectedAnswer)
             {
-                case 0: radioButton1.setBackgroundColor(Color.rgb(255,0,0)); break;
-                case 1: radioButton2.setBackgroundColor(Color.rgb(255,0,0)); break;
-                case 2: radioButton3.setBackgroundColor(Color.rgb(255,0,0)); break;
+                case 0: radioButton1.setBackgroundColor(Color.rgb(225, 123, 123)); break;
+                case 1: radioButton2.setBackgroundColor(Color.rgb(225, 123, 123)); break;
+                case 2: radioButton3.setBackgroundColor(Color.rgb(225, 123, 123)); break;
             }
             switch(correctAnswer)
             {
-                case 0: radioButton1.setBackgroundColor(Color.rgb(0,255,0)); break;
-                case 1: radioButton2.setBackgroundColor(Color.rgb(0,255,0)); break;
-                case 2: radioButton3.setBackgroundColor(Color.rgb(0,255,0)); break;
+                case 0: radioButton1.setBackgroundColor(Color.rgb(162, 240, 163)); break;
+                case 1: radioButton2.setBackgroundColor(Color.rgb(162, 240, 163)); break;
+                case 2: radioButton3.setBackgroundColor(Color.rgb(162, 240, 163)); break;
             }
         }
     }
