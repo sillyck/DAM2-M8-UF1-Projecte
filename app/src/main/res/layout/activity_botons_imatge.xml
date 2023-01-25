@@ -139,7 +139,8 @@
 	<LinearLayout
 		android:id="@+id/linearLayoutPregunta"
 		android:layout_width="783dp"
-		android:layout_height="107dp"
+		android:layout_height="125dp"
+		android:layout_marginBottom="32dp"
 		android:orientation="horizontal"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
@@ -162,11 +163,11 @@
 			android:id="@+id/textViewPregunta"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:layout_marginStart="10dp"
 			android:enabled="false"
 			android:text="Pregunta"
-			android:textSize="50sp"
 			android:textColor="#023465"
-			android:layout_marginStart="10dp"
+			android:textSize="50sp"
 			app:autoSizeTextType="uniform"
 			tools:ignore="HardcodedText" />
 
@@ -179,8 +180,9 @@
 
 	<LinearLayout
 		android:id="@+id/linearLayoutResposta"
-		android:layout_width="803dp"
-		android:layout_height="113dp"
+		android:layout_width="783dp"
+		android:layout_height="125dp"
+		android:layout_marginBottom="32dp"
 		android:orientation="horizontal"
 		app:layout_constraintBottom_toBottomOf="parent"
 		tools:ignore="MissingConstraints">
@@ -195,11 +197,11 @@
 			android:id="@+id/textViewRespota"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:layout_marginEnd="10dp"
 			android:enabled="false"
 			android:text="Resposta"
-			android:textSize="50sp"
 			android:textColor="#023465"
-			android:layout_marginEnd="10dp"
+			android:textSize="50sp"
 			app:autoSizeTextType="uniform"
 			tools:ignore="HardcodedText" />
 
@@ -215,7 +217,8 @@
 	<LinearLayout
 		android:id="@+id/linearLayoutContinuar"
 		android:layout_width="810dp"
-		android:layout_height="117dp"
+		android:layout_height="124dp"
+		android:layout_marginBottom="32dp"
 		android:orientation="horizontal"
 		app:layout_constraintBottom_toBottomOf="parent"
 		tools:ignore="MissingConstraints">
@@ -231,9 +234,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:adjustViewBounds="true"
-			android:scaleX="4"
-			android:scaleY="4"
-			app:srcCompat="@android:drawable/checkbox_on_background" />
-<!--			android:onClick="imageButtonContinuarOnClick"-->
+			app:srcCompat="@drawable/tick" />
+		<!--			android:onClick="imageButtonContinuarOnClick"-->
 	</LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

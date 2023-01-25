@@ -83,14 +83,12 @@
 
     <ImageButton
         android:id="@+id/fletxa"
-        android:layout_width="136dp"
-        android:layout_height="153dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="123dp"
+        android:layout_height="131dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etnom"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/fletxa"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
