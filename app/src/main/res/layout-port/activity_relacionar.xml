@@ -8,7 +8,7 @@
     tools:ignore="MissingDefaultResource">
 
     <TextView
-        android:id="@+id/benvinguda"
+        android:id="@+id/benvinguda1"
         android:layout_width="487dp"
         android:layout_height="110dp"
         android:fontFamily="sans-serif-black"
@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.086" />
 
     <ImageButton
-        android:id="@+id/fletxa"
+        android:id="@+id/fletxa1"
         android:layout_width="136dp"
         android:layout_height="153dp"
         android:layout_marginBottom="40dp"
@@ -41,7 +41,7 @@
         android:layout_marginStart="136dp"
         android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/benvinguda"
+        app:layout_constraintTop_toBottomOf="@+id/benvinguda1"
         app:srcCompat="@drawable/granorgue" />
 
     <ImageView
@@ -51,7 +51,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="116dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/benvinguda"
+        app:layout_constraintTop_toBottomOf="@+id/benvinguda1"
         app:srcCompat="@drawable/portatiu" />
 
     <ImageView
