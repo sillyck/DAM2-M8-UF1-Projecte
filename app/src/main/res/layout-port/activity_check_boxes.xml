@@ -24,8 +24,8 @@
 
     <ImageButton
         android:id="@+id/fletxa"
-        android:layout_width="136dp"
-        android:layout_height="153dp"
+        android:layout_width="123dp"
+        android:layout_height="131dp"
         android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
