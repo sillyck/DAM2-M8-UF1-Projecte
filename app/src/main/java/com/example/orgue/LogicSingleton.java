@@ -120,6 +120,32 @@ public class LogicSingleton
                 false
             )
         );
+        questionDatabase.put
+        (
+            5,
+            new QuestionInformation
+            (
+                ActivityRadioButtons.class,
+                "Quina és la relació entre el disseny de la façana del nou orgue i la ciutat de Valls?",
+                new String[]{"simulacio_nou_orgue"},
+                new String[]{"els calçots i els castells","els castells i el campanar","el campanar i els gegants"},
+                new String[]{"1"},
+                false
+            )
+        );
+        questionDatabase.put
+        (
+            6,
+            new QuestionInformation
+            (
+                PantallaRelacionar.class,
+                "Llegeiu i relacioneu cada tipus d'orgue amb la definició que creieu que li correspon.",
+                new String[]{"simulacio_nou_orgue"},
+                new String[]{"els calçots i els castells","els castells i el campanar","el campanar i els gegants"},
+                new String[]{"1"},
+                true
+            )
+        );
     }
 
     public int calculateCurrentQuestion(String input)
