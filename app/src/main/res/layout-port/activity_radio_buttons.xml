@@ -8,34 +8,35 @@
 
     <TextView
         android:id="@+id/benvinguda"
-        android:layout_width="468dp"
-        android:layout_height="78dp"
+        android:layout_width="460dp"
+        android:layout_height="127dp"
         android:fontFamily="sans-serif-black"
-        android:text="Quants escuts de la ciutat has pogut comptabilitzar al llarg de la visita?"
+        android:text="Enunciat"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.086" />
+        app:layout_constraintVertical_bias="0.067" />
 
     <ImageView
         android:id="@+id/foto"
-        android:layout_width="441dp"
-        android:layout_height="301dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="713dp"
+        android:layout_height="471dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/benvinguda"
         app:srcCompat="@drawable/escut" />
 
     <ImageButton
         android:id="@+id/fletxa"
-        android:layout_width="136dp"
-        android:layout_height="153dp"
+        android:layout_width="123dp"
+        android:layout_height="131dp"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,9 +46,9 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="233dp"
-        android:layout_height="230dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="471dp"
+        android:layout_height="244dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/foto">
@@ -58,16 +59,18 @@
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="Entre 10 i 20"
+            android:text="Resposta1"
+            android:textAlignment="center"
             android:textSize="30sp" />
 
         <RadioButton
             android:id="@+id/resposta2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:text="Entre 21 i 40"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Resposta2"
+            android:textAlignment="center"
             android:textSize="30sp" />
 
         <RadioButton
@@ -76,7 +79,8 @@
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="Més de 41"
+            android:text="Resposta3"
+            android:textAlignment="center"
             android:textSize="30sp" />
     </RadioGroup>
 

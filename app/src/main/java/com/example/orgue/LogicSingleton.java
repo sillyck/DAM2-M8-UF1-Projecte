@@ -89,7 +89,7 @@ public class LogicSingleton
                 ActivityRadioButtons.class,
                 "Quants escuts de la ciutat has pogut comptabilitzar al llarg de la visita?",
                 new String[]{"escut"},
-                new String[]{"entre 10 i 20","entre 21 i 40","més de 40"},
+                new String[]{"Entre 10 i 20","Entre 21 i 40","Més de 40"},
                 new String[]{"2"},
                 false
             )
@@ -100,7 +100,7 @@ public class LogicSingleton
             new QuestionInformation
             (
                 PantallaBotonsImatge.class,
-                "Segons la imatge, on creieu que estava situat l’orgue anterior? Situeu-lo al plànol",
+                "Segons la imatge, on creieu que estava situat l’orgue anterior? \n\nSitueu-lo al plànol",
                 new String[]{"orgue_antic_04"},
                 new String[]{"Segons la imatge, on creieu que estava situat l’orgue anterior? Situeu-lo al plànol"},
                 new String[]{"9"},
@@ -128,7 +128,7 @@ public class LogicSingleton
                 ActivityRadioButtons.class,
                 "Quina és la relació entre el disseny de la façana del nou orgue i la ciutat de Valls?",
                 new String[]{"simulacio_nou_orgue"},
-                new String[]{"els calçots i els castells","els castells i el campanar","el campanar i els gegants"},
+                new String[]{"Els calçots i els castells","Els castells i el campanar","El campanar i els gegants"},
                 new String[]{"1"},
                 false
             )
