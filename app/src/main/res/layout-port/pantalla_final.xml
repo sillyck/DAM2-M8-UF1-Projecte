@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/despedida"
-        android:layout_width="465dp"
-        android:layout_height="105dp"
+        android:layout_width="491dp"
+        android:layout_height="212dp"
         android:fontFamily="sans-serif-black"
         android:text="Aquest es el final de la guia, esperem que t'hagui agradat"
         android:textAlignment="center"
