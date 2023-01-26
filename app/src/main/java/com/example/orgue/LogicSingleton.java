@@ -146,6 +146,32 @@ public class LogicSingleton
                 true
             )
         );
+        questionDatabase.put
+        (
+            7,
+            new QuestionInformation
+            (
+                ActivityCheckboxes.class,
+                "Llegeiu i relacioneu cada tipus d'orgue amb la definició que creieu que li correspon.",
+                new String[]{"simulacio_nou_orgue"},
+                new String[]{"els calçots i els castells","els castells i el campanar","el campanar i els gegants"},
+                new String[]{"1"},
+                true
+            )
+        );
+        questionDatabase.put
+        (
+            8,
+            new QuestionInformation
+            (
+                Escuts.class,
+                "Llegeiu i relacioneu cada tipus d'orgue amb la definició que creieu que li correspon.",
+                new String[]{"simulacio_nou_orgue"},
+                new String[]{"els calçots i els castells","els castells i el campanar","el campanar i els gegants"},
+                new String[]{"1"},
+                true
+            )
+        );
     }
 
     public int calculateCurrentQuestion(String input)
