@@ -1,13 +1,16 @@
 package com.example.orgue;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Final extends AppCompatActivity
 {
-    public ImageButton tancar;
+    public Button tancar;
+    public TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -16,6 +19,8 @@ public class Final extends AppCompatActivity
         setContentView(R.layout.pantalla_final);
         tancar = findViewById(R.id.tancarButton);
         tancar.setOnClickListener(v -> onClick());
+        textView = findViewById(R.id.despedida);
+        textView.setText("Aquest es el final de la guia, esperem que t'hagui agradat, "+LogicSingleton.getPlayerName());
     }
 
     private void onClick() {
@@ -24,7 +29,7 @@ public class Final extends AppCompatActivity
 
     @Override
     public void finish() {
-        super.finish();
+        this.finishAffinity();
 
     }
 
