@@ -70,6 +70,8 @@ public class ActivityRadioButtons extends AppCompatActivity
         }
         else if(state==1)
         {
+            if(didItGetItRight==1) LogicSingleton.PushMoreScores(1,1);
+            else LogicSingleton.PushMoreScores(0,1);
             startActivity(LogicSingleton.NextQuestion(ActivityRadioButtons.this));
         }
     }

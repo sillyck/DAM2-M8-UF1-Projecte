@@ -75,7 +75,13 @@ public class PantallaRelacionar extends AppCompatActivity
                 dropdown4.setEnabled(false);
                 checkAnswers();
                 break;
-            case 1: startActivity(LogicSingleton.NextQuestion(PantallaRelacionar.this)); break;
+            case 1:
+                int corrects = 0;
+
+                for(int i=0; i<didItGetItRight.length; i++) if(didItGetItRight[i]==1) corrects++;
+                LogicSingleton.PushMoreScores(corrects,didItGetItRight.length);
+                startActivity(LogicSingleton.NextQuestion(PantallaRelacionar.this));
+                break;
         }
     }
 

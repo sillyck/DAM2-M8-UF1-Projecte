@@ -83,7 +83,13 @@ public class ActivityCheckboxes extends AppCompatActivity
             setPaintableAnswers();
             paintCheckboxes();
         }
-        else startActivity(LogicSingleton.NextQuestion(ActivityCheckboxes.this));
+        else
+        {
+            int corrects = 0;
+            for(int i=0; i<paintableAnswers.length; i++) if(correctAnswers[i]==currentAnswers[i]) corrects++;
+            LogicSingleton.PushMoreScores(corrects,9);
+            startActivity(LogicSingleton.NextQuestion(ActivityCheckboxes.this));
+        }
     }
 
     private void setPaintableAnswers()

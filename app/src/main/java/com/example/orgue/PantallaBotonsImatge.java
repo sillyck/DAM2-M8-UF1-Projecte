@@ -143,6 +143,8 @@ public class PantallaBotonsImatge extends AppCompatActivity
 
 	public void imageButtonContinuarOnClick(/*View v*/)
 	{
+		if(didItGetItRight==1) LogicSingleton.PushMoreScores(1,1);
+		else LogicSingleton.PushMoreScores(0,1);
 		Intent intent = new Intent(LogicSingleton.NextQuestion(PantallaBotonsImatge.this));
 		startActivity(intent);
 	}
