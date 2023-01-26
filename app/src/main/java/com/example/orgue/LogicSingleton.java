@@ -10,6 +10,8 @@ public class LogicSingleton
 {
     private static String playerName;
     private static int currentQuestion;
+    public static int currentScore;
+    public static int totalScore;
     private static Map<Integer,QuestionInformation> questionDatabase;
 
     public static void Initialize()
@@ -45,6 +47,12 @@ public class LogicSingleton
         currentQuestion++;
         if(WhatActivityShouldBeLoaded(currentContext,currentQuestion)!=null) return WhatActivityShouldBeLoaded(currentContext,currentQuestion);
         throw new NullPointerException();
+    }
+
+    public static void PushMoreScores(int current, int total)
+    {
+        currentScore += current;
+        totalScore += total;
     }
 
     private static Intent WhatActivityShouldBeLoaded(Context currentContext, int num)
