@@ -6,11 +6,27 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * Classe que controla la pantalla final.
+ * La pantalla en que dius els stats del jugador i tanca l'aplicació.
+ */
 public class Final extends AppCompatActivity
 {
+    /**
+     * El botó que en fer-li click executa el metode per tancar l'aplicació.
+     */
     public Button tancar;
+
+    /**
+     * El TextView a on es posará el text que contindrá els stats.
+     */
     public TextView textView;
 
+    /**
+     * @param savedInstanceState If the activity is being re-initialized after
+     *                           previously being shut down then this Bundle contains the data it most
+     *                           recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -31,6 +47,9 @@ public class Final extends AppCompatActivity
         textView.setText(string);
     }
 
+    /**
+     * Tanca l'aplicació en fer click al botó.
+     */
     private void onClick()
     {
         this.finishAffinity();
