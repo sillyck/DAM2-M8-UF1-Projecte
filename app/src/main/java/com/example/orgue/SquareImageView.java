@@ -2,7 +2,6 @@ package com.example.orgue;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 
@@ -23,11 +22,14 @@ public class SquareImageView extends androidx.appcompat.widget.AppCompatImageVie
         super(context, attrs, defStyleAttr);
     }
 
-//    public SquareImageView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes)
-//    {
-//        super(context, attrs, defStyleAttr, defStyleRes);
-//    }
-
+    /**
+     * @param widthMeasureSpec  horizontal space requirements as imposed by the parent.
+     *                          The requirements are encoded with
+     *                          {@link android.view.View.MeasureSpec}.
+     * @param heightMeasureSpec vertical space requirements as imposed by the parent.
+     *                          The requirements are encoded with
+     *                          {@link android.view.View.MeasureSpec}.
+     */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec)
     {
