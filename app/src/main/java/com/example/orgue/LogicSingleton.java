@@ -3,7 +3,6 @@ package com.example.orgue;
 import android.content.Context;
 import android.content.Intent;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +13,6 @@ import java.util.Objects;
  */
 public class LogicSingleton
 {
-
     /**
      * El nom del jugador.
      */
