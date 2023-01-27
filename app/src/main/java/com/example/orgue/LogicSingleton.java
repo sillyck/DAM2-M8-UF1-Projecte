@@ -2,6 +2,8 @@ package com.example.orgue;
 
 import android.content.Context;
 import android.content.Intent;
+
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -12,14 +14,28 @@ public class LogicSingleton
     private static int currentQuestion;
     public static int currentScore;
     public static int totalScore;
+    private static long timeStart;
+    private static long timeFinish;
+
+    public static int durationSeconds;
+    public static int durationMinutes;
+
     private static Map<Integer,QuestionInformation> questionDatabase;
 
     public static void Initialize()
     {
+        timeStart = System.currentTimeMillis();
         playerName = "";
         currentQuestion = 0;
         questionDatabase = new HashMap<>();
         PushInformationToDatabase();
+    }
+
+    public static void StopTimer()
+    {
+        timeFinish = System.currentTimeMillis();
+        durationSeconds = (int)((timeFinish-timeStart)/1000);
+        durationMinutes = (int)((float)durationSeconds/60);
     }
 
     public static void SetNewPlayerName(String newPlayerName)
