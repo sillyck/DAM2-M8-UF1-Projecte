@@ -1,5 +1,6 @@
 package com.example.orgue;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.ImageButton;
@@ -10,21 +11,67 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * Activitat de la pantalla de radiobuttons.
+ */
 public class ActivityRadioButtons extends AppCompatActivity
 {
+    /**
+     * Estat de la pregunta. Si esta en 0, accepta respostes; 1: contestada.
+     */
     public int state = 0;
 
+    /**
+     *  Pregunta actual.
+     */
     public int question = -1;
-    public int correctAnswer = -1;
-    public int selectedAnswer = -1;
-    public int didItGetItRight = -1; //-1: Not answered yet; 0: Wrong answer; 1: Correct answer
 
+    /**
+     * Número del radiobutton correcte, segons el LogicSingleton.
+     */
+    public int correctAnswer = -1;
+
+    /**
+     * Número del radiobutton que el jugador ha seleccionat.
+     */
+    public int selectedAnswer = -1;
+
+    /**
+     * Int32 de 3 valors segons si s'ha respost be, malament o no a la preguta.
+     * -1: encara no contestat; 0: resposta incorrecta; 1: resposta correcta.
+     */
+    public int didItGetItRight = -1;
+
+    /**
+     * L'ImageButton del botó amb la fletxa per canviar d'estat o continuar amb la seguent pantalla.
+     */
     public ImageButton imageButton;
+
+    /**
+     * El RadioGroup on passa tota la acció de la pantalla.
+     */
     public RadioGroup radioGroup;
+
+    /**
+     * Un dels 3 RadioButtons que hi ha a la pantalla.
+     */
     public RadioButton radioButton1, radioButton2, radioButton3;
+
+    /**
+     * El textView on hi será el titul de la pregunta
+     */
     public TextView textView;
+
+    /**
+     * L'imatge de la pregunta.
+     */
     public ImageView imageView;
 
+    /**
+     * @param savedInstanceState If the activity is being re-initialized after
+     *                           previously being shut down then this Bundle contains the data it most
+     *                           recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -44,6 +91,10 @@ public class ActivityRadioButtons extends AppCompatActivity
         setThingsToQuestion();
     }
 
+    /**
+     * Metode que es comunica amb el LogicSingleton i obté tota la informació de la pregunta i
+     * l'aplica o guarda a on correspongui.
+     */
     public void setThingsToQuestion()
     {
         question = LogicSingleton.GetCurrentQuestion();
@@ -55,6 +106,10 @@ public class ActivityRadioButtons extends AppCompatActivity
         radioButton3.setText(LogicSingleton.getCurrentQuestionInformation().texts[2]);
     }
 
+    /**
+     * Metode que s'executa en fer click al ImageButton principal. Segons correspongui revel·la les
+     * respostes o passa a la següent pantalla.
+     */
     public void onClick()
     {
         if(state==0)
@@ -76,26 +131,14 @@ public class ActivityRadioButtons extends AppCompatActivity
         }
     }
 
+    /**
+     * Comprova cada RadioButton per veure si estan correctes o no.
+     */
+    @SuppressLint("NonConstantResourceId")
     public void comprovarRadioButtons()
     {
         if(radioGroup.getCheckedRadioButtonId()!=-1)
         {
-            System.out.println("radiooooooo "+radioGroup.getCheckedRadioButtonId());
-//            if(radioGroup.getCheckedRadioButtonId()==R.id.resposta1)
-//            {
-//                selectedAnswer = 0;
-//                checkIfAnswerCorrect(0);
-//            }
-//            else if(radioGroup.getCheckedRadioButtonId()==R.id.resposta2)
-//            {
-//                selectedAnswer = 1;
-//                checkIfAnswerCorrect(1);
-//            }
-//            else if(radioGroup.getCheckedRadioButtonId()==R.id.resposta3)
-//            {
-//                selectedAnswer = 2;
-//                checkIfAnswerCorrect(2);
-//            }
             switch(radioGroup.getCheckedRadioButtonId())
             {
                 case R.id.resposta1:
@@ -118,12 +161,19 @@ public class ActivityRadioButtons extends AppCompatActivity
         }
     }
 
+    /**
+     * Comprova si la resposta del jugador es correcte o no.
+     * @param choice Resposta del jugador
+     */
     public void checkIfAnswerCorrect(int choice)
     {
         if(choice==correctAnswer) didItGetItRight = 1;
         else didItGetItRight = 0;
     }
 
+    /**
+     * Pinta els colors de fons dels radiobuttons segons si s'ha fet bé o no.
+     */
     public void paint()
     {
         if(didItGetItRight==1)
