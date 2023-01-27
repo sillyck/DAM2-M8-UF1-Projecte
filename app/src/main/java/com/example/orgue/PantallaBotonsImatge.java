@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -13,26 +11,76 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
-import androidx.core.app.CoreComponentFactory;
 
 @SuppressWarnings({"FieldCanBeLocal", "unused", "SpellCheckingInspection"})
 public class PantallaBotonsImatge extends AppCompatActivity
 {
+	/**
+	 *  Estat de la pregunta.
+	 *  0: Pagina de pregunta; 1: pagina de respondre; 2: respós.
+	 */
 	public int state = 0;
-	public int question = -1;
-	public int correctAnswer = -1;
-	public int selectedAnswer = -1;
-	public int didItGetItRight = -1; //-1: Not answered yet; 0: Wrong answer; 1: Correct answer
 
+	/**
+	 *	Pregunta actual.
+	 */
+	public int question = -1;
+
+	/**
+	 * Numero de la casella de la resposta correcta.
+	 */
+	public int correctAnswer = -1;
+
+	/**
+	 * Numero de la casella que el jugador ha seleccionat.
+	 */
+	public int selectedAnswer = -1;
+
+	/**
+	 * Int32 de 3 valors segons si s'ha respost be, malament o no a la preguta.
+	 * -1: encara no contestat; 0: resposta incorrecta; 1: resposta correcta.
+	 */
+	public int didItGetItRight = -1;
+
+	/**
+	 * LinearLayout de la pantalla; n'hi han tres i totes estan centrades a la part inferior de la
+	 * pantalla; per canviar de pagines.
+	 */
 	private LinearLayout linearLayoutPregunta, linearLayoutResposta, linearLayoutContinuar;
+
+	/**
+	 * ImageButtons de la taula. N'hi han 12, un per cada casella clickable.
+	 */
 	private ImageButton imageButton001, imageButton002, imageButton003, imageButton004,
 						imageButton005, imageButton006, imageButton007, imageButton008,
 						imageButton009, imageButton010, imageButton011, imageButton012;
+
+	/**
+	 * Els ImageButtons que estan en els LinearLayouts de la part inferior.
+	 * Canvien de pagina o d'activitat.
+	 */
 	private ImageButton imageButtonPregunta, imageButtonResposta, imageButtonContinuar;
+
+	/**
+	 * Els diferents TextViews de la pantalla.
+	 */
 	private TextView textViewPregunta, textViewResposta, textViewTitle;
+
+	/**
+	 * L'imatge principal de la pantalla; que sols es mostra a la pagina de la pregunta.
+	 */
 	private ImageView imageView;
+
+	/**
+	 * El controlador de la taula a on els 12 ImageButtons estan.
+	 */
 	private TableLayout tableLayout;
 
+	/**
+	 * @param savedInstanceState If the activity is being re-initialized after
+	 *                           previously being shut down then this Bundle contains the data it most
+	 *                           recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -60,14 +108,23 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		setState(0);
 	}
 
+	/**
+	 * Canvia l'estat de la pregunta (la pagina). Es recomenable fer-ho desde aqui enlloc de
+	 * settejar la variable directament perque al fer-ho desde aqui també canviem l'estat dels
+	 * components segons correspongui.
+	 * @param state El nou estat
+	 */
 	public void setState(int state)
 	{
-		System.out.println(state);
 		this.state = state;
 		changeComponentStates(state);
 	}
 
-	public void changeComponentStates(int state)
+	/**
+	 * Segons l'estat actual; fa visibles o invisbles els components de la pantalla.
+	 * @param state
+	 */
+	private void changeComponentStates(int state)
 	{
 		linearLayoutPregunta.setVisibility(View.GONE);
 		linearLayoutResposta.setVisibility(View.GONE);
@@ -104,6 +161,11 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		}
 	}
 
+	/**
+	 * Funció que identifica tots els components utilitzant els seus IDs.
+	 * Normalment aixo ho posem en el onCreate directament; pero en aquesta pantalla, com que n'hi
+	 * han tants; ho hem psoat en aquesta funció per fer el onCreate no tan llarg.
+	 */
 	private void identificarComponents()
 	{
 		linearLayoutPregunta = findViewById(R.id.linearLayoutPregunta);
@@ -131,17 +193,31 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		imageButton012 = findViewById(R.id.imageButton012);
 	}
 
+	/**
+	 * Metode que s'executa en fer click al botó de "Veure Pregunta".
+	 * Fa que es mostri la pagina de la pregunta amb l'imatge.
+	 * @param v de vendetta
+	 */
 	public void imageButtonPreguntaOnClick(View v)
 	{
 		setState(0);
 	}
 
+	/**
+	 * Metode que s'executa en fer click al botó de "Veure Resposta".
+	 * Fa que es mostri la pagina de la taula de botons.
+	 * @param v Alguna cosa d'Android
+	 */
 	public void imageButtonRespostaOnClick(View v)
 	{
 		setState(1);
 	}
 
-	public void imageButtonContinuarOnClick(/*View v*/)
+	/**
+	 * Metode que s'executa en fer click al botó de "Continuar".
+	 * Fa que es carregui la seguent pantalla.
+	 */
+	public void imageButtonContinuarOnClick()
 	{
 		if(didItGetItRight==1) LogicSingleton.PushMoreScores(1,1);
 		else LogicSingleton.PushMoreScores(0,1);
@@ -149,6 +225,11 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		startActivity(intent);
 	}
 
+	/**
+	 * Metode genenic de quan es fa click en un ImaegButton de la taula.
+	 * Tots els ImageButtons porten cap aquí.
+	 * @param click El número del botó qeu s'ha pretat.
+	 */
 	public void answerCommonOnClick(int click)
 	{
 		if(state==1)
@@ -159,6 +240,10 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		}
 	}
 
+	/**
+	 *
+	 * @param highlight
+	 */
 	@SuppressWarnings("ConstantConditions")
 	public void highlightAnswers(boolean highlight)
 	{
@@ -174,12 +259,25 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		}
 	}
 
+	/**
+	 * Pinta la casella de la taula segons si s'ha respós bé o malament.
+	 * @param column Columa del botó a pintar
+	 * @param row Fila del botó a pintar
+	 * @param correct Si es correcte o no (true: correcte, verd; false: incorrecte, vermell)
+	 */
 	@SuppressWarnings("unused")
 	public void paintColourTableButton(int column, int row, boolean correct)
 	{
 		paintColourTableButton(column,row,correct,true);
 	}
 
+	/**
+	 * Pinta la casella de la taula segons si s'ha respós bé o malament.
+	 * @param column Columa del botó a pintar
+	 * @param row Fila del botó a pintar
+	 * @param correct Si es correcte o no (true: correcte, verd; false: incorrecte, vermell)
+	 * @param startsAtZero Si es true, es comença a comptar desdel 0; de lo contrarí es compta desde l'1.
+	 */
 	public void paintColourTableButton(int column, int row, boolean correct, boolean startsAtZero)
 	{
 		if(!startsAtZero)
@@ -201,6 +299,11 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		else if(row==3 && column==2) paintColourTableButton(12,correct);
 	}
 
+	/**
+	 * Pinta la casella de la taula segons si s'ha respós bé o malament.
+	 * @param num Número de la casella a pintar.
+	 * @param correct Si es correcte o no (true: correcte, verd; false: incorrecte, vermell)
+	 */
 	public void paintColourTableButton(int num, boolean correct)
 	{
 		switch(num)
@@ -220,17 +323,15 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		}
 	}
 
+	/**
+	 * Metode que es comunica amb el LogicSingleton i obté tota la informació de la pregunta i
+	 * l'aplica o guarda a on correspongui.
+	 * @param question La pregunta actual
+	 */
 	public void setThingsToQuestion(int question)
 	{
-//		switch(question)
-//		{
-//			case 1:
-				correctAnswer = Integer.parseInt(LogicSingleton.getCurrentQuestionInformation().answers[0]);
-				textViewTitle.setText(LogicSingleton.getCurrentQuestionInformation().questionTitle);
-				imageView.setImageResource(getResources().getIdentifier(LogicSingleton.getCurrentQuestionInformation().images[0],"drawable",getPackageName()));
-//				break;
-//			case 2: startActivity(new Intent(PantallaBotonsImatge.this,LogicSingleton.getCurrentQuestionInformation().questionClass));
-//			default: setThingsToQuestion(1); break;
-//		}
+		correctAnswer = Integer.parseInt(LogicSingleton.getCurrentQuestionInformation().answers[0]);
+		textViewTitle.setText(LogicSingleton.getCurrentQuestionInformation().questionTitle);
+		imageView.setImageResource(getResources().getIdentifier(LogicSingleton.getCurrentQuestionInformation().images[0],"drawable",getPackageName()));
 	}
 }
