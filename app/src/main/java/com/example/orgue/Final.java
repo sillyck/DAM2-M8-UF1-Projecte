@@ -2,7 +2,6 @@ package com.example.orgue;
 
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,31 +20,19 @@ public class Final extends AppCompatActivity
         tancar.setOnClickListener(v -> onClick());
         textView = findViewById(R.id.despedida);
         LogicSingleton.StopTimer();
-        int i = ((int)Math.round((double)(100*LogicSingleton.currentScore)/LogicSingleton.totalScore));
 
-//        StringBuilder sb = new StringBuilder(new StringBuilder().append("Aquest es el final de la guia, esperem que t'hagui agradat, ").append(LogicSingleton.getPlayerName()).append("\n\nPuntuació: ").append(LogicSingleton.currentScore).append("/").append(LogicSingleton.totalScore).append("\n(").append(i).append("%)").toString());
-        String s = "Aquest es el final de la guia, esperem que t'hagui agradat, "+LogicSingleton.getPlayerName()+"\n\nPuntuació: "+LogicSingleton.currentScore+"/"+LogicSingleton.totalScore+"\n("+i+"%)";
+        int perc = ((int)Math.round((double)(100*LogicSingleton.currentScore)/LogicSingleton.totalScore));
 
-        if(LogicSingleton.durationSeconds<=120) s = s+"\nHas tardat "+LogicSingleton.durationSeconds+" segons.";
-        else s = s+"\nHas tardat "+LogicSingleton.durationMinutes+" minuts.";
+        String string = "Aquest es el final de la guia, esperem que t'hagui agradat, "+LogicSingleton.getPlayerName()+"\n\nPuntuació: "+LogicSingleton.currentScore+"/"+LogicSingleton.totalScore+"\n("+ perc +"%)";
 
-//        System.out.println("s = " + s);
-//        System.out.println("i = " + i);
-//        System.out.println("textView.getText() = " + textView.getText());
+        if(LogicSingleton.durationSeconds<=120) string = string +"\nHas tardat "+LogicSingleton.durationSeconds+" segons.";
+        else string = string +"\nHas tardat "+LogicSingleton.durationMinutes+" minuts.";
 
-
-        textView.setText(s);
-//        System.out.println("textView.getText() = " + textView.getText());
+        textView.setText(string);
     }
 
-    private void onClick() {
-        finish();
-    }
-
-    @Override
-    public void finish() {
+    private void onClick()
+    {
         this.finishAffinity();
-
     }
-
 }
