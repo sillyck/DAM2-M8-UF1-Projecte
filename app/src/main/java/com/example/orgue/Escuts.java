@@ -6,11 +6,21 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * Pantalla de la pregunta de reflexió dels escuts.
+ */
 public class Escuts extends AppCompatActivity
 {
-
+    /**
+     * Botó que al premel, va a la pantalla final.
+     */
     public ImageButton aFinal;
 
+    /**
+     * @param savedInstanceState If the activity is being re-initialized after
+     *                           previously being shut down then this Bundle contains the data it most
+     *                           recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -20,9 +30,13 @@ public class Escuts extends AppCompatActivity
         aFinal.setOnClickListener(v -> onClick());
     }
 
-    private void onClick() {
+    /**
+     * Funció que s'executa en fer click al ImageButton.
+     * Senzillament va a la pantalla final.
+     */
+    private void onClick()
+    {
         Intent intent = new Intent(Escuts.this, Final.class);
         startActivity(intent);
     }
-
 }
