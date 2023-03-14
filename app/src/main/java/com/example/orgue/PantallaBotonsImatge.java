@@ -247,15 +247,16 @@ public class PantallaBotonsImatge extends AppCompatActivity
 	@SuppressWarnings("ConstantConditions")
 	public void highlightAnswers(boolean highlight)
 	{
-		if(selectedAnswer!=-1 && selectedAnswer==correctAnswer)
+		if(selectedAnswer!=-1 && selectedAnswer==correctAnswer) //Aqui dins hi entra si la resposta escollida es la correccta
 		{
 			didItGetItRight = 1;
 			if(highlight) paintColourTableButton(selectedAnswer,true);
 		}
-		else if(selectedAnswer!=-1 && selectedAnswer!=correctAnswer)
+		else if(selectedAnswer!=-1 && selectedAnswer!=correctAnswer) //Aqui dins hi entra si la resposta escoliida es incorrecta
 		{
 			didItGetItRight = 0;
 			if(highlight) paintColourTableButton(selectedAnswer,false);
+			paintColourTableButton(correctAnswer,true);
 		}
 	}
 
