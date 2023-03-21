@@ -4,6 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#7AC5DD"
     tools:context=".MainMenu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/musica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Musica"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/joc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jugar"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/tancarButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tancar aplicació"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/preferencies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preferencies"
+            android:textSize="24sp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
