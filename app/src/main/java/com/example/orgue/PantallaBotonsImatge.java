@@ -126,37 +126,37 @@ public class PantallaBotonsImatge extends AppCompatActivity
 	 */
 	private void changeComponentStates(int state)
 	{
-		linearLayoutPregunta.setVisibility(View.GONE);
-		linearLayoutResposta.setVisibility(View.GONE);
+		linearLayoutPregunta .setVisibility(View.GONE);
+		linearLayoutResposta .setVisibility(View.GONE);
 		linearLayoutContinuar.setVisibility(View.GONE);
-		tableLayout.setVisibility(View.GONE);
-		textViewTitle.setVisibility(View.GONE);
-		imageView.setVisibility(View.GONE);
+		tableLayout			 .setVisibility(View.GONE);
+		textViewTitle		 .setVisibility(View.GONE);
+		imageView			 .setVisibility(View.GONE);
 		switch(state)
 		{
 			case 0:
-				linearLayoutPregunta.setVisibility(View.GONE);
-				linearLayoutResposta.setVisibility(View.VISIBLE);
+				linearLayoutPregunta .setVisibility(View.GONE);
+				linearLayoutResposta .setVisibility(View.VISIBLE);
 				linearLayoutContinuar.setVisibility(View.GONE);
-				tableLayout.setVisibility(View.GONE);
-				textViewTitle.setVisibility(View.VISIBLE);
-				imageView.setVisibility(View.VISIBLE);
+				tableLayout			 .setVisibility(View.GONE);
+				textViewTitle		 .setVisibility(View.VISIBLE);
+				imageView			 .setVisibility(View.VISIBLE);
 				break;
 			case 1:
-				linearLayoutPregunta.setVisibility(View.VISIBLE);
-				linearLayoutResposta.setVisibility(View.GONE);
+				linearLayoutPregunta .setVisibility(View.VISIBLE);
+				linearLayoutResposta .setVisibility(View.GONE);
 				linearLayoutContinuar.setVisibility(View.GONE);
-				tableLayout.setVisibility(View.VISIBLE);
-				textViewTitle.setVisibility(View.GONE);
-				imageView.setVisibility(View.GONE);
+				tableLayout			 .setVisibility(View.VISIBLE);
+				textViewTitle		 .setVisibility(View.GONE);
+				imageView			 .setVisibility(View.GONE);
 				break;
 			case 2:
-				linearLayoutPregunta.setVisibility(View.GONE);
-				linearLayoutResposta.setVisibility(View.GONE);
+				linearLayoutPregunta .setVisibility(View.GONE);
+				linearLayoutResposta .setVisibility(View.GONE);
 				linearLayoutContinuar.setVisibility(View.VISIBLE);
-				tableLayout.setVisibility(View.VISIBLE);
-				textViewTitle.setVisibility(View.GONE);
-				imageView.setVisibility(View.GONE);
+				tableLayout			 .setVisibility(View.VISIBLE);
+				textViewTitle		 .setVisibility(View.GONE);
+				imageView			 .setVisibility(View.GONE);
 			break;
 		}
 	}
@@ -247,15 +247,19 @@ public class PantallaBotonsImatge extends AppCompatActivity
 	@SuppressWarnings("ConstantConditions")
 	public void highlightAnswers(boolean highlight)
 	{
-		if(selectedAnswer!=-1 && selectedAnswer==correctAnswer)
+		if(selectedAnswer!=-1 && selectedAnswer==correctAnswer) //Aqui dins hi entra si la resposta escollida es la correccta
 		{
 			didItGetItRight = 1;
 			if(highlight) paintColourTableButton(selectedAnswer,true);
 		}
-		else if(selectedAnswer!=-1 && selectedAnswer!=correctAnswer)
+		else if(selectedAnswer!=-1 && selectedAnswer!=correctAnswer) //Aqui dins hi entra si la resposta escoliida es incorrecta
 		{
 			didItGetItRight = 0;
-			if(highlight) paintColourTableButton(selectedAnswer,false);
+			if(highlight)
+			{
+				paintColourTableButton(selectedAnswer,false);
+				paintColourTableButton(correctAnswer,true);
+			}
 		}
 	}
 
