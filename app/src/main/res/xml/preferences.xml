@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress DeprecatedClassUsageInspection -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="musica"
+        android:title="Reproduir música"
+        android:summary="Es reprodueix música de fons"
+        android:defaultValue="true"/>
+</PreferenceScreen>

@@ -15,7 +15,7 @@ public class MainMenu extends AppCompatActivity
 
         findViewById(R.id.joc).setOnClickListener(v -> startActivity(new Intent(MainMenu.this, MainActivity.class)));
         findViewById(R.id.musica).setOnClickListener(v -> startActivity(new Intent(MainMenu.this, Final.class)));
-        findViewById(R.id.preferencies).setOnClickListener(v -> startActivity(new Intent(MainMenu.this, Final.class)));
+        findViewById(R.id.preferencies).setOnClickListener(v -> startActivity(new Intent(MainMenu.this, Preferencies.class)));
         findViewById(R.id.tancarButton).setOnClickListener(v -> finishAffinity());
 
     }
