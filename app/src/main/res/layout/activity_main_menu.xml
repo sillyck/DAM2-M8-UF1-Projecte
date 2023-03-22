@@ -14,6 +14,13 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/joc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jugar"
+            android:textSize="24sp" />
+
+        <Button
             android:id="@+id/musica"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -21,10 +28,10 @@
             android:textSize="24sp" />
 
         <Button
-            android:id="@+id/joc"
+            android:id="@+id/preferencies"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Jugar"
+            android:text="Preferencies"
             android:textSize="24sp" />
 
         <Button
@@ -34,12 +41,6 @@
             android:text="Tancar aplicació"
             android:textSize="24sp" />
 
-        <Button
-            android:id="@+id/preferencies"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Preferencies"
-            android:textSize="24sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
