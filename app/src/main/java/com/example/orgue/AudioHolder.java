@@ -1,11 +1,13 @@
 package com.example.orgue;
 
 import android.content.Context;
+import android.media.MediaPlayer;
 import android.media.SoundPool;
 
 public class AudioHolder
 {
     public static SoundPool soundPool;
+    public static MediaPlayer mediaPlayer;
     public static Context currentContext;
     public static int sfxid_standard;
     public static int sfxid_standardthin;
@@ -56,6 +58,32 @@ public class AudioHolder
     public static void StopSfx(Sound sound)
     {
 
+    }
+
+    public static void PlayBgm()
+    {
+        mediaPlayer.start();
+    }
+
+    public static void PlayBgm(int resid)
+    {
+        mediaPlayer = MediaPlayer.create(currentContext, resid);
+        PlayBgm();
+    }
+
+    public static void PauseBgm()
+    {
+        mediaPlayer.pause();
+    }
+
+    public static void ResumeBgm()
+    {
+        mediaPlayer.reset();
+    }
+
+    public static void ResetBgm()
+    {
+        mediaPlayer.reset();
     }
 }
 
