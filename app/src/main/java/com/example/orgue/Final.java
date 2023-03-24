@@ -1,5 +1,6 @@
 package com.example.orgue;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -52,6 +53,10 @@ public class Final extends AppCompatActivity
      */
     private void onClick()
     {
-        this.finishAffinity();
+        AudioHolder.PlaySfx(Sound.Quit);
+//        this.finishAffinity();
+        Intent intent = new Intent(Final.this, MainMenu.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 }

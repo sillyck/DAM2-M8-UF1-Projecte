@@ -112,6 +112,7 @@ public class ActivityCheckboxes extends AppCompatActivity
      */
     private void alterCheckbox(int checkbox)
     {
+        AudioHolder.PlaySfx(Sound.StandardThin);
         if(currentAnswers[checkbox]) currentAnswers[checkbox]=false;
         else currentAnswers[checkbox]=true;
     }
@@ -122,6 +123,7 @@ public class ActivityCheckboxes extends AppCompatActivity
      */
     private void onClick()
     {
+        AudioHolder.PlaySfx(Sound.Standard);
         if(state==0)
         {
             state++;

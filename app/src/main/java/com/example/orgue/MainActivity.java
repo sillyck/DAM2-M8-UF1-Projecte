@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity
     {
         if(!nom.getText().toString().isEmpty())
         {
+            AudioHolder.PlaySfx(Sound.Standard);
             LogicSingleton.Initialize();
             LogicSingleton.SetNewPlayerName(nom.getText().toString());
             startActivity(LogicSingleton.NextQuestion(MainActivity.this));

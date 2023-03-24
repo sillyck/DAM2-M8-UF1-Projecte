@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <!--suppress DeprecatedClassUsageInspection -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:key="sfx_btn"
+        android:title="Efectes de so en premer els botons"
+        android:summary=""
+        android:defaultValue="true"/>
+    <CheckBoxPreference
+        android:key="sfx_correct"
+        android:title="Efectes de so en pregunta correcta/incorrecta"
+        android:summary=""
+        android:defaultValue="true"/>
     <CheckBoxPreference
         android:key="musica"
         android:title="Reproduir música"
         android:summary="Es reprodueix música de fons"
         android:defaultValue="true"/>
+
 </PreferenceScreen>

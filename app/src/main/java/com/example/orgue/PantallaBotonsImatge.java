@@ -200,6 +200,7 @@ public class PantallaBotonsImatge extends AppCompatActivity
 	 */
 	public void imageButtonPreguntaOnClick(View v)
 	{
+		AudioHolder.PlaySfx(Sound.StandardThin);
 		setState(0);
 	}
 
@@ -210,6 +211,7 @@ public class PantallaBotonsImatge extends AppCompatActivity
 	 */
 	public void imageButtonRespostaOnClick(View v)
 	{
+		AudioHolder.PlaySfx(Sound.StandardThin);
 		setState(1);
 	}
 
@@ -219,6 +221,7 @@ public class PantallaBotonsImatge extends AppCompatActivity
 	 */
 	public void imageButtonContinuarOnClick()
 	{
+		AudioHolder.PlaySfx(Sound.Standard);
 		if(didItGetItRight==1) LogicSingleton.PushMoreScores(1,1);
 		else LogicSingleton.PushMoreScores(0,1);
 		Intent intent = new Intent(LogicSingleton.NextQuestion(PantallaBotonsImatge.this));
@@ -250,11 +253,13 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		if(selectedAnswer!=-1 && selectedAnswer==correctAnswer) //Aqui dins hi entra si la resposta escollida es la correccta
 		{
 			didItGetItRight = 1;
+			AudioHolder.PlaySfx(Sound.Warning);
 			if(highlight) paintColourTableButton(selectedAnswer,true);
 		}
 		else if(selectedAnswer!=-1 && selectedAnswer!=correctAnswer) //Aqui dins hi entra si la resposta escoliida es incorrecta
 		{
 			didItGetItRight = 0;
+			AudioHolder.PlaySfx(Sound.Quit);
 			if(highlight)
 			{
 				paintColourTableButton(selectedAnswer,false);

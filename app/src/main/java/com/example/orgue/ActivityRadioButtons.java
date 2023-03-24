@@ -88,6 +88,10 @@ public class ActivityRadioButtons extends AppCompatActivity
 
         imageButton.setOnClickListener(v -> onClick());
 
+        radioButton1.setOnClickListener(v -> AudioHolder.PlaySfx(Sound.StandardThin));
+        radioButton2.setOnClickListener(v -> AudioHolder.PlaySfx(Sound.StandardThin));
+        radioButton3.setOnClickListener(v -> AudioHolder.PlaySfx(Sound.StandardThin));
+
         setThingsToQuestion();
     }
 
@@ -125,6 +129,7 @@ public class ActivityRadioButtons extends AppCompatActivity
         }
         else if(state==1)
         {
+            AudioHolder.PlaySfx(Sound.Standard);
             if(didItGetItRight==1) LogicSingleton.PushMoreScores(1,1);
             else LogicSingleton.PushMoreScores(0,1);
             startActivity(LogicSingleton.NextQuestion(ActivityRadioButtons.this));
@@ -178,6 +183,7 @@ public class ActivityRadioButtons extends AppCompatActivity
     {
         if(didItGetItRight==1)
         {
+            AudioHolder.PlaySfx(Sound.Warning);
             switch(selectedAnswer)
             {
                 case 0: radioButton1.setBackgroundColor(Color.rgb(162, 240, 163)); break;
@@ -187,6 +193,7 @@ public class ActivityRadioButtons extends AppCompatActivity
         }
         else if(didItGetItRight==0)
         {
+            AudioHolder.PlaySfx(Sound.Quit);
             switch(selectedAnswer)
             {
                 case 0: radioButton1.setBackgroundColor(Color.rgb(225, 123, 123)); break;

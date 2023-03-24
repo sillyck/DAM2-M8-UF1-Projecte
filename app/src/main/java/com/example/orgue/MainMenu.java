@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 
 public class MainMenu extends AppCompatActivity
 {
@@ -13,10 +14,28 @@ public class MainMenu extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-        findViewById(R.id.joc).setOnClickListener(v -> startActivity(new Intent(MainMenu.this, MainActivity.class)));
-        findViewById(R.id.musica).setOnClickListener(v -> startActivity(new Intent(MainMenu.this, Final.class)));
-        findViewById(R.id.preferencies).setOnClickListener(v -> startActivity(new Intent(MainMenu.this, Preferencies.class)));
-        findViewById(R.id.tancarButton).setOnClickListener(v -> finishAffinity());
+        AudioHolder.Start(MainMenu.this);
+
+        findViewById(R.id.joc).setOnClickListener(v ->
+        {
+            AudioHolder.PlaySfx(Sound.Standard);
+            startActivity(new Intent(MainMenu.this, MainActivity.class));
+        });
+        findViewById(R.id.musica).setOnClickListener(v ->
+        {
+            AudioHolder.PlaySfx(Sound.Standard);
+            startActivity(new Intent(MainMenu.this, Final.class));
+        });
+        findViewById(R.id.preferencies).setOnClickListener(v ->
+        {
+            AudioHolder.PlaySfx(Sound.Standard);
+            startActivity(new Intent(MainMenu.this, Preferencies.class));
+        });
+        findViewById(R.id.tancarButton).setOnClickListener(v ->
+        {
+            AudioHolder.soundPool.release();
+            finishAffinity();
+        });
 
     }
 }

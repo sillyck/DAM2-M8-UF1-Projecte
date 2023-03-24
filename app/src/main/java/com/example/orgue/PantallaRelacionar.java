@@ -156,6 +156,7 @@ public class PantallaRelacionar extends AppCompatActivity
 
         if(didItGetItRightInGeneral==1)
         {
+            AudioHolder.PlaySfx(Sound.Warning);
             dropdown1.setBackgroundColor(Color.rgb(162, 240, 163));
             dropdown2.setBackgroundColor(Color.rgb(162, 240, 163));
             dropdown3.setBackgroundColor(Color.rgb(162, 240, 163));
@@ -163,6 +164,7 @@ public class PantallaRelacionar extends AppCompatActivity
         }
         else if(didItGetItRightInGeneral==0)
         {
+            AudioHolder.PlaySfx(Sound.Standard);
             if(didItGetItRight[0]==1) dropdown1.setBackgroundColor(Color.rgb(162, 240, 163));
             else dropdown1.setBackgroundColor(Color.rgb(225, 123, 123));
             if(didItGetItRight[1]==1) dropdown2.setBackgroundColor(Color.rgb(162, 240, 163));
