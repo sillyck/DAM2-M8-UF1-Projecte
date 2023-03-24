@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Orgue"
         tools:targetApi="31">
         <activity
+            android:name=".Music"
+            android:exported="false" />
+        <activity
             android:name=".MainMenu"
             android:exported="true">
             <intent-filter>
@@ -41,8 +44,7 @@
             android:exported="false" />
         <activity
             android:name=".Preferencies"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

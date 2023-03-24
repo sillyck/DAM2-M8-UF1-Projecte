@@ -22,13 +22,12 @@ public class AudioHolder
     public static void Start(Context context)
     {
         currentContext = context;
-
         soundPool = new SoundPool.Builder().setMaxStreams(3).build();
 
         sfxid_standard     = soundPool.load(currentContext, R.raw.marieta_r3_sfx_standard,    1);
         sfxid_standardthin = soundPool.load(currentContext, R.raw.marieta_r3_sfx_standardthin,1);
-        sfxid_warning      = soundPool.load(currentContext, R.raw.marieta_r3_sfx_warning,     1);
-        sfxid_quit         = soundPool.load(currentContext, R.raw.marieta_r3_sfx_quit,        1);
+        sfxid_warning      = soundPool.load(currentContext, R.raw.correct,     1);
+        sfxid_quit         = soundPool.load(currentContext, R.raw.fail,        1);
     }
 
     public static void PlaySfx(Sound sound)
