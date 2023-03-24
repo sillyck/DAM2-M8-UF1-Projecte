@@ -19,11 +19,13 @@ public class MainMenu extends AppCompatActivity
         findViewById(R.id.joc).setOnClickListener(v ->
         {
             AudioHolder.PlaySfx(Sound.Standard);
+            AudioHolder.PlayBgm();
             startActivity(new Intent(MainMenu.this, MainActivity.class));
         });
         findViewById(R.id.musica).setOnClickListener(v ->
         {
             AudioHolder.PlaySfx(Sound.Standard);
+            AudioHolder.StopBgm();
             startActivity(new Intent(MainMenu.this, Final.class));
         });
         findViewById(R.id.preferencies).setOnClickListener(v ->
@@ -34,6 +36,7 @@ public class MainMenu extends AppCompatActivity
         findViewById(R.id.tancarButton).setOnClickListener(v ->
         {
             AudioHolder.soundPool.release();
+            AudioHolder.mediaPlayer.release();
             finishAffinity();
         });
 

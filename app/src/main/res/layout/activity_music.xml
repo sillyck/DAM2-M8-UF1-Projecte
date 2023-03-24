@@ -8,9 +8,39 @@
 
 
     <LinearLayout
-        android:layout_width="798dp"
-        android:layout_height="1278dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="810dp"
+        android:layout_height="62dp"
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp"></LinearLayout>
+        tools:layout_editor_absoluteY="1dp">
+
+        <Button
+            android:id="@+id/btnMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Menu" />
+
+        <Button
+            android:id="@+id/btnAsignar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ASIGNAR CANÇO DURANT LA PARTIDA" />
+
+        <Button
+            android:id="@+id/btnPauseMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PAUSAR MUSICA" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="800dp"
+        android:layout_height="1079dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="0dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

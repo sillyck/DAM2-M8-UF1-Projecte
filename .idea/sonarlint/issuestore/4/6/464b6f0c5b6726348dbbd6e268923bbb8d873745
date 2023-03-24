@@ -1,0 +1,48 @@
+
+p
+java:S1104	"UMake soundPool a static final constant or non-public and provide accessors if needed.(±†± üÿÿÿÿ
+r
+java:S1104
+"WMake mediaPlayer a static final constant or non-public and provide accessors if needed.(­Áûøÿÿÿÿ
+n
+java:S1104"ZMake currentContext a static final constant or non-public and provide accessors if needed.(¡i
+u
+java:S1104"ZMake sfxid_standard a static final constant or non-public and provide accessors if needed.(àèƒ‡üÿÿÿÿ
+y
+java:S1104"^Make sfxid_standardthin a static final constant or non-public and provide accessors if needed.(¸ù¾çüÿÿÿÿ
+o
+java:S1104"YMake sfxid_warning a static final constant or non-public and provide accessors if needed.(Ï¥öÅ
+l
+java:S1104"VMake sfxid_quit a static final constant or non-public and provide accessors if needed.(ú¸õ
+J
+java:S1444	"/Make this "public static soundPool" field final(±†± üÿÿÿÿ
+L
+java:S1444
+"1Make this "public static mediaPlayer" field final(­Áûøÿÿÿÿ
+H
+java:S1444"4Make this "public static currentContext" field final(¡i
+O
+java:S1444"4Make this "public static sfxid_standard" field final(àèƒ‡üÿÿÿÿ
+S
+java:S1444"8Make this "public static sfxid_standardthin" field final(¸ù¾çüÿÿÿÿ
+I
+java:S1444"3Make this "public static sfxid_warning" field final(Ï¥öÅ
+F
+java:S1444"0Make this "public static sfxid_quit" field final(ú¸õ
+t
+java:S3008"YRename this field "sfxid_standard" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àèƒ‡üÿÿÿÿ
+x
+java:S3008"]Rename this field "sfxid_standardthin" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸ù¾çüÿÿÿÿ
+n
+java:S3008"XRename this field "sfxid_warning" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï¥öÅ
+k
+java:S3008"URename this field "sfxid_quit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú¸õ
+–
+java:S1186;"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ğçæz
+U
+java:S1118":Add a private constructor to hide the implicit public one.(Şş´˜ÿÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(Ç Ş§üÿÿÿÿ
+o	java:S115b"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(´…ÍÕ
+t	java:S115c"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Ò‰Áûÿÿÿÿ
+o	java:S115d"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(©Ğåà
+t	java:S115e"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ıÜ‘ıÿÿÿÿ
