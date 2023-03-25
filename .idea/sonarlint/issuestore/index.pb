@@ -9,18 +9,10 @@ h
 8app/src/main/java/com/example/orgue/SquareImageView.java,9\d\9dd93f7503f90dfd9230a2e50a8e1f93caa0d80d
 j
 :app/src/main/java/com/example/orgue/SquareImageButton.java,3\c\3c88e782fc18b4aefb9055000aaa9553cf641e56
-m
-=app/src/main/java/com/example/orgue/ActivityRadioButtons.java,4\5\4517829deed856d9299ec7a2693dcdab59ab517b
 e
 5app/src/main/java/com/example/orgue/MainActivity.java,7\f\7f634f06a1a17c630d9bc4298f12049092802609
-d
-4app/src/main/java/com/example/orgue/AudioHolder.java,4\6\464b6f0c5b6726348dbbd6e268923bbb8d873745
-a
-1app/src/main/java/com/example/orgue/MainMenu.java,7\3\73e39c18c9a977c22753115ee395f9f3b3ee1e9b
 ^
 .app/src/main/java/com/example/orgue/Final.java,d\a\da8a230832bb575c4dcfea1c18450e0638ae540a
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 k
 ;app/src/main/java/com/example/orgue/ActivityCheckboxes.java,d\4\d41c8bacafab9a9d648c316e5ab1add53dfc9e05
 l
@@ -29,5 +21,3 @@ e
 5app/src/main/java/com/example/orgue/Preferencies.java,4\f\4ffd6eb243b6a30c4e9177c95b7c66e89df53281
 m
 =app/src/main/java/com/example/orgue/PantallaBotonsImatge.java,c\4\c4adf9cd1b606874bf1c5cb6c3efca08e84d1a42
-^
-.app/src/main/java/com/example/orgue/Music.java,1\d\1da38f965e95a5dac1c74f45745fb47434fe6e8e

@@ -6,8 +6,22 @@ import android.media.SoundPool;
 
 public class AudioHolder
 {
+    public static int[] listOfSongs = new int[]
+    {
+      R.raw.fe_awakening_ost_conquest,
+      R.raw.layton1_puzzle
+    };
+
+    public static String[] namesOfSongs = new String[]
+    {
+            "Placeholder 1: \"FE:A\"",
+            "Placeholder 2: \"L1\""
+    };
+
+    public static int selectedIndex = 0;
     public static SoundPool soundPool;
     public static MediaPlayer mediaPlayer;
+    public static MediaPlayer mediaPlayerMusic;
     public static Context currentContext;
     public static int sfxid_standard;
     public static int sfxid_standardthin;
@@ -23,8 +37,9 @@ public class AudioHolder
     {
         currentContext = context;
         soundPool = new SoundPool.Builder().setMaxStreams(3).build();
-        mediaPlayer = MediaPlayer.create(currentContext,R.raw.fe_awakening_ost_conquest);
-//        mediaPlayer.pause();
+//        mediaPlayer = MediaPlayer.create(currentContext,R.raw.fe_awakening_ost_conquest);
+        mediaPlayer = MediaPlayer.create(currentContext,listOfSongs[selectedIndex]);
+        mediaPlayerMusic = MediaPlayer.create(currentContext,listOfSongs[selectedIndex]);
 
         sfxid_standard     = soundPool.load(currentContext, R.raw.marieta_r3_sfx_standard,    1);
         sfxid_standardthin = soundPool.load(currentContext, R.raw.marieta_r3_sfx_standardthin,1);

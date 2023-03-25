@@ -26,7 +26,7 @@ public class MainMenu extends AppCompatActivity
         {
             AudioHolder.PlaySfx(Sound.Standard);
             AudioHolder.StopBgm();
-            startActivity(new Intent(MainMenu.this, Final.class));
+            startActivity(new Intent(MainMenu.this, Music.class));
         });
         findViewById(R.id.preferencies).setOnClickListener(v ->
         {
@@ -39,6 +39,5 @@ public class MainMenu extends AppCompatActivity
             AudioHolder.mediaPlayer.release();
             finishAffinity();
         });
-
     }
 }

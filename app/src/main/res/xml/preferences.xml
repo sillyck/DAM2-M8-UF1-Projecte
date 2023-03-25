@@ -16,7 +16,7 @@
     <CheckBoxPreference
         android:key="musica"
         android:title="Reproduir música"
-        android:summary="Es reprodueix música de fons"
+        android:summary="Es reprodueix música de fons durant el joc"
         android:defaultValue="true"/>
 
 </PreferenceScreen>
