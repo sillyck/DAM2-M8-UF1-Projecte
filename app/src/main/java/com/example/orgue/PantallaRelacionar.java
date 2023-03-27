@@ -109,6 +109,7 @@ public class PantallaRelacionar extends AppCompatActivity
                 checkAnswers();
                 break;
             case 1:
+                if(AudioHolder.canPlayOkKo) AudioHolder.PlaySfx(Sound.Standard);
                 int corrects = 0;
                 for(int i=0; i<didItGetItRight.length; i++) if(didItGetItRight[i]==1) corrects++;
                 LogicSingleton.PushMoreScores(corrects,didItGetItRight.length);
@@ -129,16 +130,19 @@ public class PantallaRelacionar extends AppCompatActivity
             didItGetItRight[0] = 1;
         }
         else didItGetItRight[0] = 0;
+
         if(dropdown2.getSelectedItem().toString().equals(correctAnswers[1]))
         {
             didItGetItRight[1] = 1;
         }
         else didItGetItRight[1] = 0;
+
         if(dropdown3.getSelectedItem().toString().equals(correctAnswers[2]))
         {
             didItGetItRight[2] = 1;
         }
         else didItGetItRight[2] = 0;
+
         if(dropdown4.getSelectedItem().toString().equals(correctAnswers[3]))
         {
             didItGetItRight[3] = 1;
@@ -146,17 +150,18 @@ public class PantallaRelacionar extends AppCompatActivity
         else didItGetItRight[3] = 0;
 
         if(dropdown1.getSelectedItem().toString().equals(correctAnswers[0])
-                && dropdown2.getSelectedItem().toString().equals(correctAnswers[1])
-                && dropdown3.getSelectedItem().toString().equals(correctAnswers[2])
-                && dropdown4.getSelectedItem().toString().equals(correctAnswers[3]))
+            && dropdown2.getSelectedItem().toString().equals(correctAnswers[1])
+            && dropdown3.getSelectedItem().toString().equals(correctAnswers[2])
+            && dropdown4.getSelectedItem().toString().equals(correctAnswers[3]))
         {
             didItGetItRightInGeneral = 1;
         }
+
         didItGetItRightInGeneral = 0;
 
         if(didItGetItRightInGeneral==1)
         {
-            AudioHolder.PlaySfx(Sound.Warning);
+            if(AudioHolder.canPlayOkKo) AudioHolder.PlaySfx(Sound.Warning);
             dropdown1.setBackgroundColor(Color.rgb(162, 240, 163));
             dropdown2.setBackgroundColor(Color.rgb(162, 240, 163));
             dropdown3.setBackgroundColor(Color.rgb(162, 240, 163));
@@ -164,7 +169,7 @@ public class PantallaRelacionar extends AppCompatActivity
         }
         else if(didItGetItRightInGeneral==0)
         {
-            AudioHolder.PlaySfx(Sound.Standard);
+            if(AudioHolder.canPlayOkKo) AudioHolder.PlaySfx(Sound.Quit);
             if(didItGetItRight[0]==1) dropdown1.setBackgroundColor(Color.rgb(162, 240, 163));
             else dropdown1.setBackgroundColor(Color.rgb(225, 123, 123));
             if(didItGetItRight[1]==1) dropdown2.setBackgroundColor(Color.rgb(162, 240, 163));

@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity
         AudioHolder.canPlayOkKo = pref.getBoolean("sfx_correct",true);
 
         if(AudioHolder.canPlayBGM) AudioHolder.PlayBgm();
+        if(AudioHolder.canPlaySFX) AudioHolder.PlaySfx(Sound.Standard);
     }
 
     /**

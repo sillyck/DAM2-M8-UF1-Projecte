@@ -1,21 +1,9 @@
 
 g
 7app/src/main/java/com/example/orgue/LogicSingleton.java,e\f\ef076c6ef2791ac63e3780eb426c2830bcabc991
-k
-;app/src/main/java/com/example/orgue/PantallaRelacionar.java,6\8\684ef1d45b453ee0ad00ec3ec56997a9c765d445
-_
-/app/src/main/java/com/example/orgue/Escuts.java,d\e\de1f5dd9f6a998962ef6c2b786feae6ac9cafcd3
 h
 8app/src/main/java/com/example/orgue/SquareImageView.java,9\d\9dd93f7503f90dfd9230a2e50a8e1f93caa0d80d
 j
 :app/src/main/java/com/example/orgue/SquareImageButton.java,3\c\3c88e782fc18b4aefb9055000aaa9553cf641e56
-^
-.app/src/main/java/com/example/orgue/Final.java,d\a\da8a230832bb575c4dcfea1c18450e0638ae540a
-k
-;app/src/main/java/com/example/orgue/ActivityCheckboxes.java,d\4\d41c8bacafab9a9d648c316e5ab1add53dfc9e05
-l
-<app/src/main/java/com/example/orgue/QuestionInformation.java,f\e\fef53e5b83987046c7063ca3365a5da60aed0611
 e
 5app/src/main/java/com/example/orgue/Preferencies.java,4\f\4ffd6eb243b6a30c4e9177c95b7c66e89df53281
-m
-=app/src/main/java/com/example/orgue/PantallaBotonsImatge.java,c\4\c4adf9cd1b606874bf1c5cb6c3efca08e84d1a42

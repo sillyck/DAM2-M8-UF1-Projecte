@@ -123,7 +123,6 @@ public class ActivityCheckboxes extends AppCompatActivity
      */
     private void onClick()
     {
-        AudioHolder.PlaySfx(Sound.Standard);
         if(state==0)
         {
             state++;
@@ -138,9 +137,22 @@ public class ActivityCheckboxes extends AppCompatActivity
             checkBox9.setEnabled(false);
             setPaintableAnswers();
             paintCheckboxes();
+
+            int corrects = 0;
+            for(int i=0; i<paintableAnswers.length; i++) if(correctAnswers[i]==currentAnswers[i]) corrects++;
+
+            if(corrects==9)
+            {
+                if(AudioHolder.canPlayOkKo) AudioHolder.PlaySfx(Sound.Warning);
+            }
+            else
+            {
+                if(AudioHolder.canPlayOkKo) AudioHolder.PlaySfx(Sound.Quit);
+            }
         }
         else
         {
+            if(AudioHolder.canPlaySFX) AudioHolder.PlaySfx(Sound.Standard);
             int corrects = 0;
             for(int i=0; i<paintableAnswers.length; i++) if(correctAnswers[i]==currentAnswers[i]) corrects++;
             LogicSingleton.PushMoreScores(corrects,9);

@@ -18,23 +18,26 @@ public class MainMenu extends AppCompatActivity
 
         findViewById(R.id.joc).setOnClickListener(v ->
         {
-            AudioHolder.PlaySfx(Sound.Standard);
-            AudioHolder.PlayBgm();
+//            AudioHolder.PlaySfx(Sound.Standard);
+//            AudioHolder.PlayBgm();
             startActivity(new Intent(MainMenu.this, MainActivity.class));
         });
         findViewById(R.id.musica).setOnClickListener(v ->
         {
             AudioHolder.PlaySfx(Sound.Standard);
             AudioHolder.StopBgm();
+            AudioHolder.mediaPlayerMusic.stop();
             startActivity(new Intent(MainMenu.this, Music.class));
         });
         findViewById(R.id.preferencies).setOnClickListener(v ->
         {
             AudioHolder.PlaySfx(Sound.Standard);
+            AudioHolder.mediaPlayerMusic.stop();
             startActivity(new Intent(MainMenu.this, Preferencies.class));
         });
         findViewById(R.id.tancarButton).setOnClickListener(v ->
         {
+            AudioHolder.mediaPlayerMusic.release();
             AudioHolder.soundPool.release();
             AudioHolder.mediaPlayer.release();
             finishAffinity();

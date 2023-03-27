@@ -48,7 +48,7 @@ public class Final extends AppCompatActivity
         textView.setText(string);
 
         AudioHolder.StopBgm();
-        AudioHolder.PlaySfx(Sound.Warning);
+        if(AudioHolder.canPlayOkKo) AudioHolder.PlaySfx(Sound.Warning);
     }
 
     /**
@@ -56,7 +56,7 @@ public class Final extends AppCompatActivity
      */
     private void onClick()
     {
-        AudioHolder.PlaySfx(Sound.StandardThin);
+        if(AudioHolder.canPlaySFX) AudioHolder.PlaySfx(Sound.StandardThin);
 //        this.finishAffinity();
         Intent intent = new Intent(Final.this, MainMenu.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

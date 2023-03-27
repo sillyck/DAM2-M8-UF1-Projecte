@@ -36,7 +36,7 @@ public class Escuts extends AppCompatActivity
      */
     private void onClick()
     {
-        AudioHolder.PlaySfx(Sound.Standard);
+        if(AudioHolder.canPlaySFX) AudioHolder.PlaySfx(Sound.Standard);
         Intent intent = new Intent(Escuts.this, Final.class);
         startActivity(intent);
     }
