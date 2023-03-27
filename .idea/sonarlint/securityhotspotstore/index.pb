@@ -9,8 +9,6 @@ h
 8app/src/main/java/com/example/orgue/SquareImageView.java,9\d\9dd93f7503f90dfd9230a2e50a8e1f93caa0d80d
 j
 :app/src/main/java/com/example/orgue/SquareImageButton.java,3\c\3c88e782fc18b4aefb9055000aaa9553cf641e56
-e
-5app/src/main/java/com/example/orgue/MainActivity.java,7\f\7f634f06a1a17c630d9bc4298f12049092802609
 ^
 .app/src/main/java/com/example/orgue/Final.java,d\a\da8a230832bb575c4dcfea1c18450e0638ae540a
 k

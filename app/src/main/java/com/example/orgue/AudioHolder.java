@@ -28,6 +28,10 @@ public class AudioHolder
     public static int sfxid_warning;
     public static int sfxid_quit;
 
+    public static boolean canPlayBGM = true;
+    public static boolean canPlaySFX = true;
+    public static boolean canPlayOkKo = true;
+
     public static void Start()
     {
         Start(currentContext);

@@ -2,7 +2,9 @@ package com.example.orgue;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
@@ -36,6 +38,14 @@ public class MainActivity extends AppCompatActivity
         nom = findViewById(R.id.etnom);
         fletxa = findViewById(R.id.fletxa);
         fletxa.setOnClickListener(v -> onClick());
+
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+
+        AudioHolder.canPlayBGM = pref.getBoolean("musica",true);
+        AudioHolder.canPlaySFX = pref.getBoolean("sfx_btn",true);
+        AudioHolder.canPlayOkKo = pref.getBoolean("sfx_correct",true);
+
+        if(AudioHolder.canPlayBGM) AudioHolder.PlayBgm();
     }
 
     /**
@@ -46,7 +56,7 @@ public class MainActivity extends AppCompatActivity
     {
         if(!nom.getText().toString().isEmpty())
         {
-            AudioHolder.PlaySfx(Sound.Standard);
+            if(AudioHolder.canPlaySFX) AudioHolder.PlaySfx(Sound.Standard);
             LogicSingleton.Initialize();
             LogicSingleton.SetNewPlayerName(nom.getText().toString());
             startActivity(LogicSingleton.NextQuestion(MainActivity.this));

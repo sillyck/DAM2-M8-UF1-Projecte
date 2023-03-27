@@ -32,7 +32,7 @@ public class Music extends AppCompatActivity
         progressBar = findViewById(R.id.progressBar);
 
         textName.setText(AudioHolder.namesOfSongs[AudioHolder.selectedIndex]);
-        textTime.setText(String.format(/*AudioHolder.mediaPlayerMusic.getDuration(),*/"%d min, %d sec",
+        textTime.setText(String.format("%dm %ds",
                 TimeUnit.MILLISECONDS.toMinutes(AudioHolder.mediaPlayerMusic.getDuration()),
                 TimeUnit.MILLISECONDS.toSeconds(AudioHolder.mediaPlayerMusic.getDuration()) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(AudioHolder.mediaPlayerMusic.getDuration()))));
     }
@@ -50,7 +50,7 @@ public class Music extends AppCompatActivity
             AudioHolder.mediaPlayerMusic.stop();
             AudioHolder.mediaPlayerMusic = MediaPlayer.create(AudioHolder.currentContext,AudioHolder.listOfSongs[AudioHolder.selectedIndex]);
             textName.setText(AudioHolder.namesOfSongs[AudioHolder.selectedIndex]);
-            textTime.setText(String.format(/*AudioHolder.mediaPlayerMusic.getDuration(),*/"%d min, %d sec",
+            textTime.setText(String.format("%dm %ds",
                     TimeUnit.MILLISECONDS.toMinutes(AudioHolder.mediaPlayerMusic.getDuration()),
                     TimeUnit.MILLISECONDS.toSeconds(AudioHolder.mediaPlayerMusic.getDuration()) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(AudioHolder.mediaPlayerMusic.getDuration()))));
         }
@@ -76,7 +76,7 @@ public class Music extends AppCompatActivity
             AudioHolder.mediaPlayerMusic.stop();
             AudioHolder.mediaPlayerMusic = MediaPlayer.create(AudioHolder.currentContext,AudioHolder.listOfSongs[AudioHolder.selectedIndex]);
             textName.setText(AudioHolder.namesOfSongs[AudioHolder.selectedIndex]);
-            textTime.setText(String.format(/*AudioHolder.mediaPlayerMusic.getDuration(),*/"%d min, %d sec",
+            textTime.setText(String.format("%dm %ds",
                     TimeUnit.MILLISECONDS.toMinutes(AudioHolder.mediaPlayerMusic.getDuration()),
                     TimeUnit.MILLISECONDS.toSeconds(AudioHolder.mediaPlayerMusic.getDuration()) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(AudioHolder.mediaPlayerMusic.getDuration()))));
         }
