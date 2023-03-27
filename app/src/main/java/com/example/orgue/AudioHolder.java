@@ -8,14 +8,14 @@ public class AudioHolder
 {
     public static int[] listOfSongs = new int[]
     {
-      R.raw.fe_awakening_ost_conquest,
-      R.raw.layton1_puzzle
+        R.raw.fe_awakening_ost_conquest,
+        R.raw.layton1_puzzle
     };
 
     public static String[] namesOfSongs = new String[]
     {
-            "Placeholder 1: \"FE:A\"",
-            "Placeholder 2: \"L1\""
+        "Placeholder 1: \"FE:A\"",
+        "Placeholder 2: \"L1\""
     };
 
     public static int selectedIndex = 0;
@@ -27,10 +27,10 @@ public class AudioHolder
     public static int sfxid_standardthin;
     public static int sfxid_warning;
     public static int sfxid_quit;
-
     public static boolean canPlayBGM = true;
     public static boolean canPlaySFX = true;
     public static boolean canPlayOkKo = true;
+    public static boolean isStarted = false;
 
     public static void Start()
     {
@@ -39,16 +39,21 @@ public class AudioHolder
 
     public static void Start(Context context)
     {
-        currentContext = context;
-        soundPool = new SoundPool.Builder().setMaxStreams(3).build();
-//        mediaPlayer = MediaPlayer.create(currentContext,R.raw.fe_awakening_ost_conquest);
-        mediaPlayer = MediaPlayer.create(currentContext,listOfSongs[selectedIndex]);
-        mediaPlayerMusic = MediaPlayer.create(currentContext,listOfSongs[selectedIndex]);
+        if(isStarted==false)
+        {
+            isStarted = true;
+            currentContext = context;
+            soundPool = new SoundPool.Builder().setMaxStreams(3).build();
+//          mediaPlayer = MediaPlayer.create(currentContext,R.raw.fe_awakening_ost_conquest);
+            mediaPlayer = MediaPlayer.create(currentContext,listOfSongs[selectedIndex]);
+            mediaPlayer.setVolume(0.35f,0.35f);
+            mediaPlayerMusic = MediaPlayer.create(currentContext,listOfSongs[selectedIndex]);
 
-        sfxid_standard     = soundPool.load(currentContext, R.raw.marieta_r3_sfx_standard,    1);
-        sfxid_standardthin = soundPool.load(currentContext, R.raw.marieta_r3_sfx_standardthin,1);
-        sfxid_warning      = soundPool.load(currentContext, R.raw.correct,1);
-        sfxid_quit         = soundPool.load(currentContext, R.raw.fail,   1);
+            sfxid_standard     = soundPool.load(currentContext, R.raw.marieta_r3_sfx_standard,    1);
+            sfxid_standardthin = soundPool.load(currentContext, R.raw.marieta_r3_sfx_standardthin,1);
+            sfxid_warning      = soundPool.load(currentContext, R.raw.correct,1);
+            sfxid_quit         = soundPool.load(currentContext, R.raw.fail,   1);
+        }
     }
 
     public static void PlaySfx(Sound sound)
