@@ -39,7 +39,7 @@ public class Music extends AppCompatActivity
 
     public void Fix()
     {
-
+        AudioHolder.mediaPlayer = MediaPlayer.create(AudioHolder.currentContext,AudioHolder.listOfSongs[AudioHolder.selectedIndex]);
     }
 
     public void Prev()

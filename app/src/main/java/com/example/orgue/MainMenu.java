@@ -20,6 +20,7 @@ public class MainMenu extends AppCompatActivity
         {
 //            AudioHolder.PlaySfx(Sound.Standard);
 //            AudioHolder.PlayBgm();
+            AudioHolder.mediaPlayerMusic.stop();
             startActivity(new Intent(MainMenu.this, MainActivity.class));
         });
         findViewById(R.id.musica).setOnClickListener(v ->
