@@ -37,7 +37,6 @@ public class Music extends AppCompatActivity
 
         textName = findViewById(R.id.nom);
         textTime = findViewById(R.id.timer);
-        progressBar = findViewById(R.id.progressBar);
 
         textName.setText(AudioHolder.namesOfSongs[AudioHolder.selectedIndex]);
         textTime.setText(String.format("Duració: %dm %ds",
