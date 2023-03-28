@@ -15,7 +15,6 @@ public class Music extends AppCompatActivity
 {
     TextView textName;
     TextView textTime;
-    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -44,11 +43,17 @@ public class Music extends AppCompatActivity
             TimeUnit.MILLISECONDS.toSeconds(AudioHolder.mediaPlayerMusic.getDuration()) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(AudioHolder.mediaPlayerMusic.getDuration()))));
     }
 
+    /**
+     * Fa que la canço que sona ara mateix en el reproductor de musica sigui la musica que sonará a la partida.
+     */
     public void Fix()
     {
         AudioHolder.mediaPlayer = MediaPlayer.create(AudioHolder.currentContext,AudioHolder.listOfSongs[AudioHolder.selectedIndex]);
     }
 
+    /**
+     * Passa a la canço anterior de la llista (si es que hi ha una canço anterior).
+     */
     public void Prev()
     {
         if(AudioHolder.selectedIndex!=0)
@@ -63,6 +68,9 @@ public class Music extends AppCompatActivity
         }
     }
 
+    /**
+     * Reprodueix o pausa la canço del reproductor.
+     */
     public void PlayOrPause()
     {
         if(AudioHolder.mediaPlayerMusic.isPlaying())
@@ -75,6 +83,9 @@ public class Music extends AppCompatActivity
         }
     }
 
+    /**
+     * Passa a la canço seguent de la llista (si es que hi ha una canço seguent).
+     */
     public void Next()
     {
         if(AudioHolder.selectedIndex!=AudioHolder.listOfSongs.length-1)
@@ -89,6 +100,9 @@ public class Music extends AppCompatActivity
         }
     }
 
+    /**
+     * Atura la canço del reproductor.
+     */
     public void Stop()
     {
         AudioHolder.mediaPlayerMusic.stop();
