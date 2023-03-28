@@ -1,6 +1,4 @@
 
-g
-7app/src/main/java/com/example/orgue/LogicSingleton.java,e\f\ef076c6ef2791ac63e3780eb426c2830bcabc991
 h
 8app/src/main/java/com/example/orgue/SquareImageView.java,9\d\9dd93f7503f90dfd9230a2e50a8e1f93caa0d80d
 j

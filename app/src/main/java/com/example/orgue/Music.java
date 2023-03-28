@@ -41,6 +41,9 @@ public class Music extends AppCompatActivity
         textTime.setText(String.format("Duració: %dm %ds",
             TimeUnit.MILLISECONDS.toMinutes(AudioHolder.mediaPlayerMusic.getDuration()),
             TimeUnit.MILLISECONDS.toSeconds(AudioHolder.mediaPlayerMusic.getDuration()) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(AudioHolder.mediaPlayerMusic.getDuration()))));
+
+        Next();
+        Prev();
     }
 
     /**
