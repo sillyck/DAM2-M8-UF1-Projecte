@@ -56,7 +56,7 @@
                 android:layout_width="390dp"
                 android:layout_height="160dp"
                 android:gravity="center"
-                android:text="MUSICA"
+                android:text="MÚSICA"
                 android:textAlignment="center"
                 android:textSize="60sp"
                 android:textStyle="bold" />
