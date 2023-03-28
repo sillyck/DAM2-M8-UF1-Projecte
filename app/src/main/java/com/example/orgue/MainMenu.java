@@ -53,6 +53,36 @@ public class MainMenu extends AppCompatActivity
             AudioHolder.mediaPlayer.release();
             finishAffinity();
         });
+
+        findViewById(R.id.imgBtn_play).setOnClickListener(v ->
+        {
+//            AudioHolder.PlaySfx(Sound.Standard);
+//            AudioHolder.PlayBgm();
+            AudioHolder.mediaPlayerMusic.stop();
+            startActivity(new Intent(MainMenu.this, MainActivity.class));
+        });
+        findViewById(R.id.imgBtn_music).setOnClickListener(v ->
+        {
+            if(AudioHolder.canPlaySFX) AudioHolder.PlaySfx(Sound.Standard);
+            if(AudioHolder.mediaPlayer.isPlaying()) AudioHolder.StopBgm();
+//            AudioHolder.mediaPlayer.pause();
+            AudioHolder.mediaPlayerMusic.stop();
+            startActivity(new Intent(MainMenu.this, Music.class));
+        });
+        findViewById(R.id.imgBtn_settings).setOnClickListener(v ->
+        {
+            if(AudioHolder.canPlaySFX) AudioHolder.PlaySfx(Sound.Standard);
+            if(AudioHolder.mediaPlayer.isPlaying()) AudioHolder.mediaPlayer.pause();
+            AudioHolder.mediaPlayerMusic.stop();
+            startActivity(new Intent(MainMenu.this, Preferencies.class));
+        });
+        findViewById(R.id.imgBtn_exit).setOnClickListener(v ->
+        {
+            AudioHolder.mediaPlayerMusic.release();
+            AudioHolder.soundPool.release();
+            AudioHolder.mediaPlayer.release();
+            finishAffinity();
+        });
     }
 
     /**

@@ -7,40 +7,125 @@
     android:background="#7AC5DD"
     tools:context=".MainMenu">
 
+    <TableLayout
+        android:layout_width="760dp"
+        android:layout_height="693dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtn_exit">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="fill">
+
+            <ImageButton
+                android:id="@+id/imgBtn_play"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/jugar" />
+
+            <TextView
+                android:id="@+id/tv_play"
+                android:layout_width="390dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="4dp"
+                android:gravity="center"
+                android:text="JUGAR"
+                android:textAlignment="center"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="319dp"
+            android:gravity="fill">
+
+            <ImageButton
+                android:id="@+id/imgBtn_music"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:background="@drawable/musica" />
+
+            <TextView
+                android:id="@+id/tv_play2"
+                android:layout_width="390dp"
+                android:layout_height="160dp"
+                android:gravity="center"
+                android:text="MUSICA"
+                android:textAlignment="center"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+    </TableLayout>
+
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="bottom"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="gone">
 
         <Button
             android:id="@+id/joc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Jugar"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:visibility="gone"
+            tools:visibility="gone" />
 
         <Button
             android:id="@+id/musica"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Musica"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/preferencies"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Preferencies"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            tools:visibility="gone" />
 
         <Button
             android:id="@+id/tancarButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tancar aplicació"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            tools:visibility="gone" />
 
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imgBtn_exit"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/exit" />
+
+    <ImageButton
+        android:id="@+id/imgBtn_settings"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/settings" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
