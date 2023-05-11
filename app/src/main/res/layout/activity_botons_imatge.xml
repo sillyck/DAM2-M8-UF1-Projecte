@@ -148,7 +148,7 @@
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent">
 
-		<com.example.orgue.SquareImageButton
+		<valls.orgue.SquareImageButton
 			android:id="@+id/imageButtonPregunta"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -207,7 +207,7 @@
 			app:autoSizeTextType="uniform"
 			tools:ignore="HardcodedText" />
 
-		<com.example.orgue.SquareImageButton
+		<valls.orgue.SquareImageButton
 			android:id="@+id/imageButtonResposta"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -231,7 +231,7 @@
 			android:layout_height="0dp"
 			android:layout_weight="1" />
 
-		<com.example.orgue.SquareImageButton
+		<valls.orgue.SquareImageButton
 			android:id="@+id/imageButtonContinuar"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
