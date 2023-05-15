@@ -3,13 +3,14 @@ package valls.orgue;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Pantalla de la pregunta de reflexió dels escuts.
  */
-public class Escuts extends AppCompatActivity
+public class Credits extends AppCompatActivity
 {
     /**
      * Botó que al premel, va a la pantalla final.
@@ -25,15 +26,11 @@ public class Escuts extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pantalla_escuts);
+        setContentView(R.layout.pantalla_credits);
+        TextView textView = findViewById(R.id.enunciat);
+        textView.setText("Creat per:\nXavier Martínez i Jordi Ribellas");
         aFinal = findViewById(R.id.fletxaEscuts);
         aFinal.setOnClickListener(v -> onClick());
-    }
-
-    @Override
-    public void onBackPressed()
-    {
-        return;
     }
 
     /**
@@ -43,7 +40,8 @@ public class Escuts extends AppCompatActivity
     private void onClick()
     {
         if(AudioHolder.canPlaySFX) AudioHolder.PlaySfx(Sound.Standard);
-        Intent intent = new Intent(Escuts.this, Final.class);
+        Intent intent = new Intent(Credits.this, MainMenu.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
 }

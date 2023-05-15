@@ -108,6 +108,12 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		setState(0);
 	}
 
+	@Override
+	public void onBackPressed()
+	{
+		return;
+	}
+
 	/**
 	 * Canvia l'estat de la pregunta (la pagina). Es recomenable fer-ho desde aqui enlloc de
 	 * settejar la variable directament perque al fer-ho desde aqui també canviem l'estat dels

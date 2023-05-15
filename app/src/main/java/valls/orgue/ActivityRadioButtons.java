@@ -104,6 +104,12 @@ public class ActivityRadioButtons extends AppCompatActivity
         setThingsToQuestion();
     }
 
+    @Override
+    public void onBackPressed()
+    {
+        return;
+    }
+
     /**
      * Metode que es comunica amb el LogicSingleton i obté tota la informació de la pregunta i
      * l'aplica o guarda a on correspongui.

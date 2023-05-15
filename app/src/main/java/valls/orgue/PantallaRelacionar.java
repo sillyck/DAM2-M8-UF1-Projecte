@@ -93,6 +93,12 @@ public class PantallaRelacionar extends AppCompatActivity
         dropdown4.setAdapter(adapterView1);
     }
 
+    @Override
+    public void onBackPressed()
+    {
+        return;
+    }
+
     /**
      *  Funció que s'executa en fer click al ImageButton.
      */

@@ -49,6 +49,12 @@ public class MainActivity extends AppCompatActivity
         if(AudioHolder.canPlaySFX) AudioHolder.PlaySfx(Sound.Standard);
     }
 
+    @Override
+    public void onBackPressed()
+    {
+        return;
+    }
+
     /**
      * Funció que s'executa en fer click al ImageButton principal, inicialitza el singleton iç
      * comença a per la primera pregunta.

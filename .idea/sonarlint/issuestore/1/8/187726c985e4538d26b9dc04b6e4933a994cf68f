@@ -1,0 +1,32 @@
+
+t
+java:S2293T"YReplace the type specification in this constructor call with the diamond operator ("<>").(€ŒàÄıÿÿÿÿ
+`
+java:S1301k"KReplace this "switch" statement by "if" statements to increase readability.(İ¤a
+l
+java:S1104"QMake state a static final constant or non-public and provide accessors if needed.(‡ì÷¯ûÿÿÿÿ
+v
+java:S1104"[Make didItGetItRight a static final constant or non-public and provide accessors if needed.(¡ùÀåüÿÿÿÿ
+
+java:S1104"dMake didItGetItRightInGeneral a static final constant or non-public and provide accessors if needed.(Ÿñ­³ûÿÿÿÿ
+u
+java:S1104$"ZMake correctAnswers a static final constant or non-public and provide accessors if needed.(“Œ†¸ùÿÿÿÿ
+q
+java:S1104/"[Make dropdownOptions a static final constant or non-public and provide accessors if needed.(ÿ«›õ
+p
+java:S1104:"UMake dropdown1 a static final constant or non-public and provide accessors if needed.(á¸§Œÿÿÿÿÿ
+p
+java:S1104:"UMake dropdown2 a static final constant or non-public and provide accessors if needed.(á¸§Œÿÿÿÿÿ
+p
+java:S1104:"UMake dropdown3 a static final constant or non-public and provide accessors if needed.(á¸§Œÿÿÿÿÿ
+p
+java:S1104:"UMake dropdown4 a static final constant or non-public and provide accessors if needed.(á¸§Œÿÿÿÿÿ
+m
+java:S1104?"WMake imageButton a static final constant or non-public and provide accessors if needed.(Ş–¤
+a
+java:S1659:"FDeclare "dropdown2" and all following declarations on a separate line.(á¸§Œÿÿÿÿÿ
+8
+java:S3626c"Remove this redundant jump.(ûÁİ…8œµ˜Ö1
+6	java:S131k""Add a default case to this switch.(İ¤a
+n
+java:S3776„"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(îšÄùÿÿÿÿ

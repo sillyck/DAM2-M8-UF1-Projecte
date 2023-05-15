@@ -1,0 +1,28 @@
+
+h
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(èÈŽó
+T
+java:S1874"9Remove this use of "PreferenceManager"; it is deprecated.(· Çåûÿÿÿÿ
+^
+java:S1874"CRemove this use of "getDefaultSharedPreferences"; it is deprecated.(· Çåûÿÿÿÿ
+L
+java:S2696"6Make the enclosing method "static" or remove this set.(¬ÞÆö
+Q
+java:S2696"6Make the enclosing method "static" or remove this set.(Ñä²äÿÿÿÿÿ
+L
+java:S2696"6Make the enclosing method "static" or remove this set.(—Òˆî
+Q	java:S125"<This block of commented-out lines of code should be removed.(Þ‘Ã
+Q	java:S125%"<This block of commented-out lines of code should be removed.(°‘˜ò
+Q	java:S125:"<This block of commented-out lines of code should be removed.(Þ‘Ã
+Q	java:S125C"<This block of commented-out lines of code should be removed.(°‘˜ò
+Q	java:S125I"<This block of commented-out lines of code should be removed.(Þ‘Ã
+T
+java:S1874j"9Remove this use of "PreferenceManager"; it is deprecated.(· Çåûÿÿÿÿ
+^
+java:S1874j"CRemove this use of "getDefaultSharedPreferences"; it is deprecated.(· Çåûÿÿÿÿ
+L
+java:S2696l"6Make the enclosing method "static" or remove this set.(¬ÞÆö
+Q
+java:S2696m"6Make the enclosing method "static" or remove this set.(Ñä²äÿÿÿÿÿ
+L
+java:S2696n"6Make the enclosing method "static" or remove this set.(—Òˆî

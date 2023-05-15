@@ -1,0 +1,15 @@
+
+p
+java:S1450"URemove the "fletxa" field and declare it as a local variable in the relevant methods.(ÒŸú›ûÿÿÿÿ
+T
+java:S1874*"9Remove this use of "PreferenceManager"; it is deprecated.(· Çåûÿÿÿÿ
+^
+java:S1874*"CRemove this use of "getDefaultSharedPreferences"; it is deprecated.(· Çåûÿÿÿÿ
+L
+java:S2696,"6Make the enclosing method "static" or remove this set.(¬ŞÆö
+Q
+java:S2696-"6Make the enclosing method "static" or remove this set.(Ñä²äÿÿÿÿÿ
+L
+java:S2696."6Make the enclosing method "static" or remove this set.(—Òˆî
+8
+java:S36267"Remove this redundant jump.(ûÁİ…8úºÖ1

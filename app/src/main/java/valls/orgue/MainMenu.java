@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.provider.MediaStore;
 
 public class MainMenu extends AppCompatActivity
 {
@@ -68,6 +67,13 @@ public class MainMenu extends AppCompatActivity
 //            AudioHolder.mediaPlayer.pause();
             AudioHolder.mediaPlayerMusic.stop();
             startActivity(new Intent(MainMenu.this, Music.class));
+        });
+        findViewById(R.id.imgBtn_info).setOnClickListener(v ->
+        {
+//            AudioHolder.PlaySfx(Sound.Standard);
+//            AudioHolder.PlayBgm();
+            AudioHolder.mediaPlayerMusic.stop();
+            startActivity(new Intent(MainMenu.this, Credits.class));
         });
         findViewById(R.id.imgBtn_settings).setOnClickListener(v ->
         {

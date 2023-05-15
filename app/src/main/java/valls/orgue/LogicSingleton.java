@@ -129,7 +129,7 @@ public class LogicSingleton
     public static Intent NextQuestion(Context currentContext)
     {
         currentQuestion++;
-        if(WhatActivityShouldBeLoaded(currentContext,currentQuestion)!=null) return WhatActivityShouldBeLoaded(currentContext,currentQuestion);
+        if(WhatActivityShouldBeLoaded(currentContext,currentQuestion)!=null) return WhatActivityShouldBeLoaded(currentContext,currentQuestion);//.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         throw new NullPointerException();
     }
 
@@ -152,7 +152,12 @@ public class LogicSingleton
      */
     private static Intent WhatActivityShouldBeLoaded(Context currentContext, int num)
     {
-        if(questionDatabase.containsKey(num)) return new Intent(currentContext, Objects.requireNonNull(questionDatabase.get(num)).questionClass);
+        if(questionDatabase.containsKey(num))
+        {
+            Intent intent = new Intent(currentContext, Objects.requireNonNull(questionDatabase.get(num)).questionClass);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            return intent;
+        }
         else return null;
     }
 

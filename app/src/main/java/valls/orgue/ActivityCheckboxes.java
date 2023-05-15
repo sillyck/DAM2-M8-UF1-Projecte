@@ -106,6 +106,12 @@ public class ActivityCheckboxes extends AppCompatActivity
         checkBox9.setOnClickListener(v -> alterCheckbox(8));
     }
 
+    @Override
+    public void onBackPressed()
+    {
+        return;
+    }
+
     /**
      * Funció que gira l'estat d'una checkbox just despres que el jugador l'hi faci click.
      * @param checkbox La checkbox a girar.

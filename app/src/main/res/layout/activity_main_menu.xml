@@ -119,6 +119,16 @@
         android:background="@drawable/exit" />
 
     <ImageButton
+        android:id="@+id/imgBtn_info"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/info"
+        app:layout_constraintEnd_toStartOf="@+id/imgBtn_settings"
+        app:layout_constraintStart_toEndOf="@+id/imgBtn_exit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
         android:id="@+id/imgBtn_settings"
         android:layout_width="150dp"
         android:layout_height="150dp"

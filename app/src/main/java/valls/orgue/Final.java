@@ -51,6 +51,12 @@ public class Final extends AppCompatActivity
         if(AudioHolder.canPlayOkKo) AudioHolder.PlaySfx(Sound.Warning);
     }
 
+    @Override
+    public void onBackPressed()
+    {
+        return;
+    }
+
     /**
      * Tanca l'aplicació en fer click al botó.
      */
