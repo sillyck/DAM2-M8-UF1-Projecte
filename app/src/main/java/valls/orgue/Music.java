@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.concurrent.TimeUnit;
 
@@ -52,6 +53,7 @@ public class Music extends AppCompatActivity
     public void Fix()
     {
         AudioHolder.mediaPlayer = MediaPlayer.create(AudioHolder.currentContext,AudioHolder.listOfSongs[AudioHolder.selectedIndex]);
+        Toast.makeText(this, "Aquesta canço será ara la que sonará enmig de la partida", Toast.LENGTH_SHORT).show();
     }
 
     /**

@@ -2,11 +2,13 @@ package valls.orgue;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 /**
  *  Classe principal de l'activitat principal; la primera pantalla de totes;
@@ -39,6 +41,8 @@ public class MainActivity extends AppCompatActivity
         fletxa = findViewById(R.id.fletxa);
         fletxa.setOnClickListener(v -> onClick());
 
+        findViewById(R.id.fletxa2).setOnClickListener(v -> LoadMainMenu());
+
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 
         AudioHolder.canPlayBGM = pref.getBoolean("musica",true);
@@ -55,6 +59,13 @@ public class MainActivity extends AppCompatActivity
         return;
     }
 
+    public void LoadMainMenu()
+    {
+        Intent intent = new Intent(MainActivity.this, MainMenu.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+
     /**
      * Funció que s'executa en fer click al ImageButton principal, inicialitza el singleton iç
      * comença a per la primera pregunta.
@@ -67,6 +78,10 @@ public class MainActivity extends AppCompatActivity
             LogicSingleton.Initialize();
             LogicSingleton.SetNewPlayerName(nom.getText().toString());
             startActivity(LogicSingleton.NextQuestion(MainActivity.this));
+        }
+        else
+        {
+            Toast.makeText(this, "Introdueix un nom abans de continuar", Toast.LENGTH_SHORT).show();
         }
     }
 }
