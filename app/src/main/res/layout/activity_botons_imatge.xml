@@ -18,22 +18,26 @@
 		android:textColor="#FFFFFF"
 		android:textSize="32dp"
 		android:textStyle="bold"
+		android:visibility="gone"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
-		tools:ignore="HardcodedText" />
+		tools:ignore="HardcodedText"
+		tools:visibility="gone" />
 
 	<ImageView
 		android:id="@+id/imageViewMain"
 		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
+		android:layout_height="0dp"
 		android:layout_marginStart="32dp"
 		android:layout_marginEnd="32dp"
-		app:layout_constraintBottom_toBottomOf="parent"
+		android:visibility="gone"
+		app:layout_constraintBottom_toTopOf="@+id/linearLayoutResposta"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent"
-		app:srcCompat="@drawable/imatge_lleons_escut_fassana"/>
+		app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+		app:srcCompat="@drawable/imatge_lleons_escut_fassana"
+		tools:visibility="gone" />
 
 	<TableLayout
 		android:id="@+id/tableLayout"
@@ -140,9 +144,8 @@
 
 	<LinearLayout
 		android:id="@+id/linearLayoutPregunta"
-		android:layout_width="783dp"
+		android:layout_width="0dp"
 		android:layout_height="125dp"
-		android:layout_marginBottom="32dp"
 		android:orientation="horizontal"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
@@ -182,12 +185,13 @@
 
 	<LinearLayout
 		android:id="@+id/linearLayoutResposta"
-		android:layout_width="783dp"
+		android:layout_width="0dp"
 		android:layout_height="125dp"
-		android:layout_marginBottom="32dp"
 		android:orientation="horizontal"
+		android:visibility="gone"
 		app:layout_constraintBottom_toBottomOf="parent"
-		tools:ignore="MissingConstraints">
+		tools:ignore="MissingConstraints"
+		tools:visibility="gone">
 
 		<View
 			android:id="@+id/viewResposta"
@@ -218,12 +222,13 @@
 
 	<LinearLayout
 		android:id="@+id/linearLayoutContinuar"
-		android:layout_width="810dp"
+		android:layout_width="0dp"
 		android:layout_height="124dp"
-		android:layout_marginBottom="32dp"
 		android:orientation="horizontal"
+		android:visibility="gone"
 		app:layout_constraintBottom_toBottomOf="parent"
-		tools:ignore="MissingConstraints">
+		tools:ignore="MissingConstraints"
+		tools:visibility="gone">
 
 		<View
 			android:id="@+id/viewContinuar"

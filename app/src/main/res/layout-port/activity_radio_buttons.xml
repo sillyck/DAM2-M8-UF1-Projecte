@@ -11,22 +11,20 @@
         android:layout_width="460dp"
         android:layout_height="127dp"
         android:fontFamily="sans-serif-black"
+        android:gravity="center"
         android:text="Enunciat"
-        android:textAlignment="center"
+        android:textAlignment="gravity"
         android:textColor="#FFFFFF"
         android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.067" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/foto"
-        android:layout_width="713dp"
+        android:layout_width="0dp"
         android:layout_height="471dp"
-        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +35,6 @@
         android:id="@+id/fletxa"
         android:layout_width="123dp"
         android:layout_height="131dp"
-        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +45,7 @@
         android:id="@+id/radioGroup"
         android:layout_width="471dp"
         android:layout_height="244dp"
-        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/fletxa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/foto">

@@ -21,23 +21,22 @@
         android:id="@+id/enunciat"
         android:layout_width="465dp"
         android:layout_height="105dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="sans-serif-black"
         android:text="Heu recordat de comptar els escuts de la ciutat? \n Ara podeu donar la resposta."
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="572dp"
         android:layout_height="379dp"
-        android:layout_marginTop="196dp"
+        app:layout_constraintBottom_toTopOf="@+id/fletxaEscuts"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enunciat"

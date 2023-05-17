@@ -29,12 +29,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="548dp"
+        android:layout_height="97dp"
         android:fontFamily="sans-serif"
         android:text="Benvinguts a la visita. Aquesta aplicació us anira guiant per a descobrir aquest instrument."
         android:textAlignment="center"
@@ -47,45 +48,47 @@
         android:id="@+id/textView2"
         android:layout_width="255dp"
         android:layout_height="38dp"
+        android:layout_marginBottom="26dp"
         android:fontFamily="sans-serif"
         android:text="Escriu el teu nom:"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="198dp"
-        android:layout_height="273dp"
-        android:background="@drawable/orgue"
+        android:layout_width="377dp"
+        android:layout_height="391dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/orgue" />
 
     <EditText
         android:id="@+id/etnom"
         android:layout_width="253dp"
         android:layout_height="51dp"
         android:ems="10"
+        android:hint="Jordi"
         android:inputType="textPersonName"
         android:textColorLink="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/linearLayout4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center|fill_vertical"
+        android:gravity="fill"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etnom">
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
             android:id="@+id/fletxa2"

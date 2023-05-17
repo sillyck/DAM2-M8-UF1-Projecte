@@ -23,14 +23,14 @@ public class MainMenu extends AppCompatActivity
         AudioHolder.canPlaySFX = pref.getBoolean("sfx_btn",true);
         AudioHolder.canPlayOkKo = pref.getBoolean("sfx_correct",true);
 
-        findViewById(R.id.tv_play).setOnClickListener(v ->
+        findViewById(R.id.imgBtn_play).setOnClickListener(v ->
         {
 //            AudioHolder.PlaySfx(Sound.Standard);
 //            AudioHolder.PlayBgm();
             AudioHolder.mediaPlayerMusic.stop();
             startActivity(new Intent(MainMenu.this, MainActivity.class));
         });
-        findViewById(R.id.tv_play2).setOnClickListener(v ->
+        findViewById(R.id.imgBtn_music).setOnClickListener(v ->
         {
             if(AudioHolder.canPlaySFX) AudioHolder.PlaySfx(Sound.Standard);
             if(AudioHolder.mediaPlayer.isPlaying()) AudioHolder.StopBgm();

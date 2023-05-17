@@ -2,6 +2,7 @@ package valls.orgue;
 
 import android.content.Context;
 import android.content.Intent;
+import android.widget.Toast;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -66,6 +67,11 @@ public class LogicSingleton
     public static void Initialize()
     {
         timeStart = System.currentTimeMillis();
+        timeFinish = System.currentTimeMillis();
+        currentScore = 0;
+        totalScore = 0;
+        durationSeconds = 0;
+        durationMinutes = 0;
         playerName = "";
         currentQuestion = 0;
         questionDatabase = new HashMap<>();
@@ -129,6 +135,7 @@ public class LogicSingleton
     public static Intent NextQuestion(Context currentContext)
     {
         currentQuestion++;
+        Toast.makeText(currentContext, "Puntuació actual: "+currentScore+"/"+totalScore, Toast.LENGTH_SHORT).show();
         if(WhatActivityShouldBeLoaded(currentContext,currentQuestion)!=null) return WhatActivityShouldBeLoaded(currentContext,currentQuestion);//.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         throw new NullPointerException();
     }
@@ -238,7 +245,8 @@ public class LogicSingleton
             (
                 ActivityRadioButtons.class,
                 "Quina és la relació entre el disseny de la façana del nou orgue i la ciutat de Valls?",
-                new String[]{"simulacio_nou_orgue"},
+//                new String[]{"simulacio_nou_orgue"},
+                new String[]{"granorgue"},
                 new String[]{"Els calçots i els castells","Els castells i el campanar","El campanar i els gegants"},
                 new String[]{"1"},
                 false
