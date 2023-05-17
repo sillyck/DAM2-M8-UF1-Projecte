@@ -10,7 +10,6 @@
         android:id="@+id/fletxaEscuts"
         android:layout_width="123dp"
         android:layout_height="131dp"
-        android:layout_marginBottom="32dp"
         android:rotation="180"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,18 +26,15 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.474"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="259dp"
         android:layout_height="261dp"
-        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,8 +43,9 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="494dp"
+        android:layout_width="wrap_content"
         android:layout_height="241dp"
+        app:layout_constraintBottom_toTopOf="@+id/fletxaEscuts"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView8"
@@ -56,7 +53,7 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="644dp"
+        android:layout_width="0dp"
         android:layout_height="277dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -132,7 +132,7 @@ public class PantallaBotonsImatge extends AppCompatActivity
 	 */
 	private void changeComponentStates(int state)
 	{
-		linearLayoutPregunta .setVisibility(View.GONE);
+		linearLayoutPregunta .setVisibility(View.INVISIBLE);
 		linearLayoutResposta .setVisibility(View.GONE);
 		linearLayoutContinuar.setVisibility(View.GONE);
 		tableLayout			 .setVisibility(View.GONE);
@@ -141,7 +141,7 @@ public class PantallaBotonsImatge extends AppCompatActivity
 		switch(state)
 		{
 			case 0:
-				linearLayoutPregunta .setVisibility(View.GONE);
+				linearLayoutPregunta .setVisibility(View.INVISIBLE);
 				linearLayoutResposta .setVisibility(View.VISIBLE);
 				linearLayoutContinuar.setVisibility(View.GONE);
 				tableLayout			 .setVisibility(View.GONE);
@@ -157,7 +157,7 @@ public class PantallaBotonsImatge extends AppCompatActivity
 				imageView			 .setVisibility(View.GONE);
 				break;
 			case 2:
-				linearLayoutPregunta .setVisibility(View.GONE);
+				linearLayoutPregunta .setVisibility(View.INVISIBLE);
 				linearLayoutResposta .setVisibility(View.GONE);
 				linearLayoutContinuar.setVisibility(View.VISIBLE);
 				tableLayout			 .setVisibility(View.VISIBLE);
