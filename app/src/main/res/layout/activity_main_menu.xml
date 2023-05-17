@@ -9,6 +9,12 @@
     android:orientation="vertical"
     tools:context=".MainMenu">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="valls.orgue.MainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_width="wrap_content"
