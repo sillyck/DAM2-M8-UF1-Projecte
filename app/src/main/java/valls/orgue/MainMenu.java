@@ -23,14 +23,14 @@ public class MainMenu extends AppCompatActivity
         AudioHolder.canPlaySFX = pref.getBoolean("sfx_btn",true);
         AudioHolder.canPlayOkKo = pref.getBoolean("sfx_correct",true);
 
-        findViewById(R.id.joc).setOnClickListener(v ->
+        findViewById(R.id.tv_play).setOnClickListener(v ->
         {
 //            AudioHolder.PlaySfx(Sound.Standard);
 //            AudioHolder.PlayBgm();
             AudioHolder.mediaPlayerMusic.stop();
             startActivity(new Intent(MainMenu.this, MainActivity.class));
         });
-        findViewById(R.id.musica).setOnClickListener(v ->
+        findViewById(R.id.tv_play2).setOnClickListener(v ->
         {
             if(AudioHolder.canPlaySFX) AudioHolder.PlaySfx(Sound.Standard);
             if(AudioHolder.mediaPlayer.isPlaying()) AudioHolder.StopBgm();
@@ -38,14 +38,14 @@ public class MainMenu extends AppCompatActivity
             AudioHolder.mediaPlayerMusic.stop();
             startActivity(new Intent(MainMenu.this, Music.class));
         });
-        findViewById(R.id.preferencies).setOnClickListener(v ->
+        findViewById(R.id.imgBtn_settings).setOnClickListener(v ->
         {
             if(AudioHolder.canPlaySFX) AudioHolder.PlaySfx(Sound.Standard);
             if(AudioHolder.mediaPlayer.isPlaying()) AudioHolder.mediaPlayer.pause();
             AudioHolder.mediaPlayerMusic.stop();
             startActivity(new Intent(MainMenu.this, Preferencies.class));
         });
-        findViewById(R.id.tancarButton).setOnClickListener(v ->
+        findViewById(R.id.imgBtn_exit).setOnClickListener(v ->
         {
             AudioHolder.mediaPlayerMusic.release();
             AudioHolder.soundPool.release();
